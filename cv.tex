@@ -3,34 +3,72 @@
 \usepackage{fontspec}
 \setmainfont{CMU Serif}
 
+\usepackage{biblatex}
+\addbibresource{main.bib}
+
 \moderncvtheme[black]{classic}
 
 \firstname{Serge}
 \lastname{Kozlukov}
 \title{Applied math student}
-\address{1, Universitetskaya}{394000 Voronezh}
+\address{38-25, Geroyev Sibiryakov}{394065 Voronezh}
 \mobile{+7 951 566 57 72}
 \email{newkozlukov@gmail.com}
 \extrainfo{https://newkozlukov.github.io/}
 \photo[64pt]{pic.png}
 \quote{
   $$ J =
-  \mu \left( \mathtt{ProblemSolving} \right) + $$
-$$ + \mu\left(  \mathtt{ImpactOnTheWorld} \right) + $$
-$$ - \mu\left(  \mathtt{UnmotivatedDecisions} \right) \longrightarrow \sup$$ 
+  \mathtt{ProblemSolving} + $$
+$$ + \mathtt{ImpactOnTheWorld} + $$
+$$ - \mathtt{UnmotivatedDecisions}\longrightarrow \sup$$ 
 }
 
 \begin{document}
 \maketitle
 
+\section{Personal}
+\cvline{Born}{Nov 14, 1996}
+\cvline{Citizenship}{Russia}
+
+\section{Languages}
+\cvlanguage{Russian}{Native}{}
+\cvlanguage{English}{Fluent}{}
+\cvlanguage{German}{Beginner}{}
+
+\section{Research interests}
+\cvlistitem{Functional analysis}
+\cvlistitem{Perturbation theory}
+\cvlistitem{Optimal control theory}
+\cvlistitem{Spline interpolation and approximation}
+\cvlistitem{Stochastic processes}
+\cvlistitem{Differentiable programming and DL}
+
+
 \section{Education}
 \cventry{2009--2012}{Data processing op.}{Center of additional education ``Real
-  School''}{Voronezh}{\textit{All ``A''}}{.NET development, supervised by Dmitry
+  School''}{Voronezh}{\textit{all ``A''}}{\textbf{.NET development}, supervised by Dmitry
 Babich}
-\cventry{2014--2018}{B.Sc.}{Voronezh State
-  University}{Voronezh}{\textit{All grades are 5}}{
-  First joined the Mechanics department.
-  Next year moved to Applied Mathematics and Informatics program
-  where I got acquainted with Anatoly Baskakov --- my future scientific advisor.
+\cventry{2014--2018}{B.~Sc.}{Voronezh State
+  University}{Voronezh}{\textit{with honours}}{
+  Mechanics department, then Applied Mathematics and
+  Informatics program, then \textbf{Nonlinear Dynamics} department. 
+  Worked on functional analysis and perturbation theory
+  \textbf{supervised by} Dr. Prof. \textbf{Anatoly Baskakov}.
+  In particular studied and applied~\cite{Koz17,Koz18} the abstract method of
+  similar operators~\cite{baskakov1987theorem} developed by Anatoly Baskakov.
 }
+
+\section{Work experience}
+\cventry{April~2018--present}{Math consultant and software
+  developer}{Russian3DScanner}{Voronezh}{}{}
+
+\section{Peer-reviewed publications}
+\printbibliography[keyword=peerReviewed,heading=none]
+
+\section{Talks, conferences}
+\nocite{*}
+\printbibliography[keyword=talk,heading=none]
+
+\section{References}
+\printbibliography[heading=none,notkeyword=my]
 \end{document}
