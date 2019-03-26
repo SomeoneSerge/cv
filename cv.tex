@@ -11,7 +11,7 @@
   BoldItalicFont=cmunbi,
 ]{cmunrm}
 
-\usepackage[natbib=true]{biblatex}
+\usepackage[citestyle=authoryear,natbib]{biblatex}
 \addbibresource{main.bib}
 
 \moderncvtheme[black]{classic}
@@ -49,11 +49,13 @@
     Standard libraries, build systems, version control, tests, etc.
 }
 \cvlistitem{Algorithms and data structures
-(a bit of ICPC, Sedgewick@coursera, etc).}
+(a bit of ICPC, \citet{sedgewickPartI,segdewickPartII}, etc).}
 \cvlistitem{Networking in \(*\)-nix (\texttt{iproute2}, \texttt{aircrack-ng}, etc).}
-\cvlistitem{Bits of \texttt{Kademlia}, \texttt{cjdns}, onion routing (at least, concept-wise), \texttt{Tox}.}
+\cvlistitem{Bits of \texttt{Kademlia}~\citep{maymounkov2002kademlia},
+\texttt{cjdns}~\citep{delisle2012cjdns}, onion routing (at least,
+concept-wise), \texttt{Tox}~\citep{tox}.}
 \cvlistitem{Bits of systemd,
-very scarce bits of linux kernel familiarity.}
+very scarce bits of linux kernel.}
 \cvlistitem{Bits of security (LUKS, GPG, PKI, WoT, CoT, OTR, etc).}
 \cvlistitem{A tiling WM+\texttt{neovim} kind of person.}
 \cvlistitem{Beginning
@@ -71,7 +73,7 @@ but I \emph{do} learn.}
     the early stages, some mentorship (in terms of splitting a problem into
     small steps, maintaining constant progress, etc), as well as oportunity to
     ask stupid questions, and casual reminders that I shouldn't waste time
-seeking for a "perfect" solution.}
+seeking a "perfect" solution.}
 
 \section{Research interests}
 \cvlistitem{Linear analysis, perturbation theory, method of similar operators.}
@@ -119,7 +121,7 @@ Babich}
 \cventry{April~2018--Sep~2018}{R\&D}{\citet{r3ds}}{Voronezh}{}{
     \textbf{Splines}, mesh deformation tools, facial emotions reconstruction;
     reproduced results of certain papers, built demos
-    (technologies used: \textbf{\texttt{C++}}, \texttt{Qt}, proprietary \texttt{3D}-stack);
+    (technologies used: \textbf{\texttt{C++}}, \texttt{\citet{eigen}}, \texttt{Qt}, proprietary \texttt{3D}-stack);
     studied works of Carl de Boor's related to interpolation and approximation.
 }
 
