@@ -1,8 +1,9 @@
-\documentclass[8pt,a4paper]{moderncv}
+\documentclass[10pt,a4paper]{moderncv}
 
 
-\usepackage[scale=0.75]{geometry}
+\usepackage[margin=1.5cm]{geometry}
 \usepackage[inline]{enumitem}
+\usepackage{multicol}
 \usepackage{fontspec}
 \setmainfont[
   Ligatures=TeX,
@@ -15,6 +16,7 @@
 \addbibresource{main.bib}
 
 \usepackage[firstyear=2009,lastyear=2020]{moderntimeline}
+\usepackage{fontawesome}
 
 
 \moderncvstyle{classic} 
@@ -23,13 +25,13 @@
 \firstname{Sergei}
 \lastname{Kozlukov}
 \title{Aspiring mathematician}
-\address{5, Tsimlyanskaya}{109~559~Moscow}{Russia}
+\address{5, Tsimlyanskaya, 109~559~Moscow, Russia}{}{}
 \mobile{+7~(900)~945~5929}
 \email{newkozlukov@gmail.com}
-\social[github]{newkozlukov}
-\social[twitter]{newkozlukov}
-\social[linkedin]{newkozlukov}
-\extrainfo{https://newkozlukov.gitlab.io/}
+\extrainfo{
+\url{https://newkozlukov.gitlab.io/}\\
+\faGithub~\faTwitter~\faLinkedin~\faPaperPlaneO: \texttt{@newkozlukov}
+}
 %\photo[64pt]{pic.jpg}
 
 \begin{document}
@@ -40,102 +42,100 @@
 \cvline{Citizenship}{Russian}
 
 \section{Industry experience}
-\tlcventry{2018/4}{2018/8}{R\&D}{\citet{r3ds}}{Voronezh}{}{
-    \textbf{Splines}, mesh deformation tools, facial emotions reconstruction;
-    reproduced results of certain papers, built demos
-    (technologies used: \textbf{\texttt{C++}}, \texttt{\citet{eigen}}, \texttt{Qt}, proprietary \texttt{3D}-stack);
-    studied works of Carl de Boor's related to interpolation and approximation.
+\tlcventry{2018/4}{2018/8}{R\&D}{\citet{r3ds}}{Vorone\'z}{}{
+    B-Splines~\citep{de1978practical,de2012splinefunktionen}, mesh deformation tools, facial emotions reconstruction.
+    Reproduced results of certain papers, built demos
+    (tools: \textbf{\texttt{C++}}, \texttt{\citet{eigen}}, \texttt{Qt}, proprietary \texttt{3D}-stack).
 }
 
 \section{Education}
-\tlcventry{2009}{2012}{Data processing op.}{}{Voronezh}{}{\textbf{.NET development}, supervised by Dmitry
-Babich}
-\tlcventry{2014}{2018}{B.~Sc. in Applied Mathematics}{Voronezh State
-  University}{Voronezh}{honours}{
+\tlcventry{2009}{2012}{Data processing op.}{}{Vorone\'z}{}{\textbf{.NET stack}, supervised by Dmitry
+Babi\'c}
+\tlcventry{2014}{2018}{B.~Sc. in Applied Mathematics}{Vorone\'z State
+  University}{Vorone\'z}{honours}{
+  \begin{flushleft}
   Mechanics department, then Applied Mathematics and
   Informatics program, then Nonlinear Dynamics department. 
   Functional analysis and perturbation theory,
   \textbf{supervised by} Dr. Prof. \textbf{Anatoly Baskakov}.
-  Studied~\citep{baskakov1987theorem}, published:
-  \begin{enumerate}
-      \item
-          Perturbations of the matrix-of-all-ones~\citep{Koz17}.
-      \item Perturbations of Kronecker products of self-adjoint matrices with simple spectrum~\citep{Koz18}.
-  \end{enumerate}
+  Taken Sedgewick's Algoritms~\citep{sedgewickPartI,sedgewickPartII}.
+  Occasional ICPC participations.
+  Studied~\citep{baskakov1987theorem}.
+  \tldatecventry{2017}{Peer-reviewed publication}{}{}{}{
+  Spectral properties of perturbations of the matrix-of-all-ones~\citep{Koz17}}
+  \tldatecventry{2018}{Peer-reviewed publication}{}{}{}{
+  \parbox{.7\linewidth}{Spectral properties of perturbations of Kronecker products of self-adjoint matrices with simple spectrum~\citep{Koz18}}}
+  \end{flushleft}
 }
 \tlcventry{2018}{2020}{M.~Sc. in Statistical Learning Theory}{Skoltech and Higher School of Economics}%
 {Moscow}{}{
-Investigating relationship of extendibility of geodesics
-and distnace convexity, supervised by Thibaut Le Gouic.}
-
-\section{Peer-reviewed publications}
-\printbibliography[keyword=peerReviewed,heading=none]
+Investigating extendibility of geodesics and distance convexity, supervised by Thibaut~Le~Gouic.}
 
 \section{Soft skills}
-\cvlistitem{\textbf{Math}.}
-\cvlistitem{Only learning to communicate with people,
-but I \emph{do} learn.}
-\cvlistitem{Coming from academic environment, might need, at
-    the early stages, some mentorship, as well as oportunity to
-    ask stupid questions, and casual reminders that I shouldn't waste time
-seeking a "perfect" solution.}
+\cvlanguage{Math}{Native}{}
+\cvlanguage{Communication}{Intermediate}{Only learning to communicate with people, but I \emph{do} learn}
+\cvlanguage{Time management}{Pre-intermediate}{Tend to waste time seeking a perfect solution. Fix in progress}
 
 \section{Hard skills}
-\cvlistitem{Math.}
-\cvlistitem{Done some time with
+\begin{multicols}{2}
+\cvlanguage{Linear algebra, calculus}{Native}{}
+\cvlanguage{Functional analysis}{Comfortable}{}
+\cvlanguage{
     \texttt{Python},
     \texttt{C},
     \texttt{C++},
     \texttt{Java},
-    \texttt{C\#+.NET},
-    etc
-}
-\cvlistitem{
-    Standard libraries, build systems, version control, tests, etc.
-}
-\cvlistitem{Algorithms and data structures
-(a bit of ICPC, \citet{sedgewickPartI,segdewickPartII}, etc).}
-\cvlistitem{Beginning to learn \texttt{pytorch} stack.}
+    \texttt{C\#+.NET}
+}{Comfortable}{}
+\cvlanguage{
+    Standard libraries, \texttt{make}, \texttt{cmake}, \texttt{git}.
+}{Comfortable}{}
+\cvlanguage{Algorithms and data structures}{Comfortable}{}
+\cvlanguage{Pytorch}{Pre-intermediate}{}
+\end{multicols}
 
 \section{Research interests}
-\cvlistitem{Linear analysis, perturbation theory, method of similar operators.}
-\cvlistitem{B-Splines.}
-\cvlistitem{Optimal control.}
-
-\section{Subjects under study}
-\cvlistitem{\textbf{Geodesics}, global curvature spaces,
+\begin{itemize*}
+\item{Linear analysis, perturbation theory, method of similar operators.}
+\item{B-Splines.}
+\item{Optimal control.}
+\item{Geodesics, global curvature spaces,
     concentration inequalities, esp. variance inequality;
 stability of barycenters.}
-\cvlistitem{\textbf{Riemannian optimization}.}
-\cvlistitem{\textbf{Geometric methods in deep learning}.}
-\cvlistitem{\textbf{Hyperbolic deeplearning}.}
-\cvlistitem{Projective dynamics, FEM, heat methods; anything related
+\item{Riemannian optimization.}
+\item{Geometric methods in deep learning.}
+\item{Hyperbolic deeplearning.}
+\item{Projective dynamics, FEM, heat methods; anything related
 to simulation of deformable objects;
-anything related to \textbf{VFX}.}
-\cvlistitem{Dual methods in optimization, accelerated methods.}
-\cvlistitem{Optimal transportation theory (Monge-Kantorovich problems).}
-\cvlistitem{Embedded Linux, U-Boot.}
-\cvlistitem{Coq.}
+anything related to VFX.}
+\item{Dual methods in optimization, accelerated methods.}
+\item{Optimal transportation theory (Monge-Kantorovich problems).}
+\item{Embedded Linux, U-Boot.}
+\item{Coq.}
+\end{itemize*}
 
-\section{Other skills}
-\cvlistitem{Networking in \(*\)-nix (\texttt{iproute2}, \texttt{aircrack-ng}, etc).}
-\cvlistitem{Bits of \texttt{Kademlia}~\citep{maymounkov2002kademlia},
-\texttt{cjdns}~\citep{delisle2012cjdns}, onion routing (at least,
-concept-wise), \texttt{Tox}~\citep{tox}.}
-\cvlistitem{Bits of systemd,
-very scarce bits of linux kernel.}
-\cvlistitem{Bits of security (LUKS, GPG, PKI, WoT, CoT, OTR, etc).}
-\cvlistitem{Tiling WM+\texttt{neovim} workflow.}
+\newpage
+\section{Supplementary}
+\subsection{Other skills}
+\cvlanguage{\(*\)-nix}{Native}{\texttt{Archlinux}, \texttt{i3-wm}, \texttt{nvim}}
+\cvlanguage{Networking
+}{Intermediate}{\texttt{iproute2},
+\texttt{systemd-network},
+\texttt{aircrack-ng},
+\texttt{Kademlia}~\citep{maymounkov2002kademlia},
+\texttt{cjdns}~\citep{delisle2012cjdns},
+onion routing,
+\texttt{Tox}~\citep{tox}}
+\cvlanguage{Compsec}{Elementary}{LUKS, GPG, PKI, WoT, CoT, OTR, etc}
+\cvlanguage{English}{Comfortable}{Amused by Shakesperian grammar and weird accents}
 
-\section{Languages}
-\cvlanguage{Russian}{Native}{}
-\cvlanguage{English}{Comfortable}{}
+\subsection{Peer-reviewed publications}
+\printbibliography[keyword=peerReviewed,heading=none]
 
-\section{Talks, conferences}
+\subsection{Talks, conferences}
 \nocite{*}
 \printbibliography[keyword=talk,heading=none]
 
-\newpage
-\section*{External references}
+\subsection*{External references}
 \printbibliography[heading=none,notkeyword=my]
 \end{document}
