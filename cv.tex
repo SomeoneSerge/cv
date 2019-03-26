@@ -11,12 +11,13 @@
   ItalicFont=cmunti,
   BoldItalicFont=cmunbi,
 ]{cmunrm}
-
 \usepackage[citestyle=authoryear,natbib]{biblatex}
 \addbibresource{main.bib}
 
+\usepackage[firstyear=2009,lastyear=2020]{moderntimeline}
 
-\moderncvstyle{casual} 
+
+\moderncvstyle{classic} 
 \moderncvcolor{black}  
 
 \firstname{Sergei}
@@ -36,10 +37,10 @@
 
 \section{Personal}
 \cvline{Born}{Nov 14, 1996}
-\cvline{Citizenship}{Russia}
+\cvline{Citizenship}{Russian}
 
 \section{Industry experience}
-\cventry{April~2018--Sep~2018}{R\&D}{\citet{r3ds}}{Voronezh}{}{
+\tlcventry{2018/4}{2018/8}{R\&D}{\citet{r3ds}}{Voronezh}{}{
     \textbf{Splines}, mesh deformation tools, facial emotions reconstruction;
     reproduced results of certain papers, built demos
     (technologies used: \textbf{\texttt{C++}}, \texttt{\citet{eigen}}, \texttt{Qt}, proprietary \texttt{3D}-stack);
@@ -47,10 +48,10 @@
 }
 
 \section{Education}
-\cventry{2009--2012}{Data processing op.}{}{Voronezh}{}{\textbf{.NET development}, supervised by Dmitry
+\tlcventry{2009}{2012}{Data processing op.}{}{Voronezh}{}{\textbf{.NET development}, supervised by Dmitry
 Babich}
-\cventry{2014--2018}{B.~Sc.}{Voronezh State
-  University}{Voronezh}{\textit{with honours}}{
+\tlcventry{2014}{2018}{B.~Sc. in Applied Mathematics}{Voronezh State
+  University}{Voronezh}{honours}{
   Mechanics department, then Applied Mathematics and
   Informatics program, then Nonlinear Dynamics department. 
   Functional analysis and perturbation theory,
@@ -62,8 +63,8 @@ Babich}
       \item Perturbations of Kronecker products of self-adjoint matrices with simple spectrum~\citep{Koz18}.
   \end{enumerate}
 }
-\cventry{2018--present}{M.~Sc.}{Skoltech and Higher School of Economics}%
-{Moscow}{}{Statistical Learning Theory.
+\tlcventry{2018}{2020}{M.~Sc. in Statistical Learning Theory}{Skoltech and Higher School of Economics}%
+{Moscow}{}{
 Investigating relationship of extendibility of geodesics
 and distnace convexity, supervised by Thibaut Le Gouic.}
 
@@ -96,16 +97,6 @@ seeking a "perfect" solution.}
 (a bit of ICPC, \citet{sedgewickPartI,segdewickPartII}, etc).}
 \cvlistitem{Beginning to learn \texttt{pytorch} stack.}
 
-\section{Other skills}
-\cvlistitem{Networking in \(*\)-nix (\texttt{iproute2}, \texttt{aircrack-ng}, etc).}
-\cvlistitem{Bits of \texttt{Kademlia}~\citep{maymounkov2002kademlia},
-\texttt{cjdns}~\citep{delisle2012cjdns}, onion routing (at least,
-concept-wise), \texttt{Tox}~\citep{tox}.}
-\cvlistitem{Bits of systemd,
-very scarce bits of linux kernel.}
-\cvlistitem{Bits of security (LUKS, GPG, PKI, WoT, CoT, OTR, etc).}
-\cvlistitem{A tiling WM+\texttt{neovim} kind of person.}
-
 \section{Research interests}
 \cvlistitem{Linear analysis, perturbation theory, method of similar operators.}
 \cvlistitem{B-Splines.}
@@ -125,6 +116,16 @@ anything related to \textbf{VFX}.}
 \cvlistitem{Optimal transportation theory (Monge-Kantorovich problems).}
 \cvlistitem{Embedded Linux, U-Boot.}
 \cvlistitem{Coq.}
+
+\section{Other skills}
+\cvlistitem{Networking in \(*\)-nix (\texttt{iproute2}, \texttt{aircrack-ng}, etc).}
+\cvlistitem{Bits of \texttt{Kademlia}~\citep{maymounkov2002kademlia},
+\texttt{cjdns}~\citep{delisle2012cjdns}, onion routing (at least,
+concept-wise), \texttt{Tox}~\citep{tox}.}
+\cvlistitem{Bits of systemd,
+very scarce bits of linux kernel.}
+\cvlistitem{Bits of security (LUKS, GPG, PKI, WoT, CoT, OTR, etc).}
+\cvlistitem{Tiling WM+\texttt{neovim} workflow.}
 
 \section{Languages}
 \cvlanguage{Russian}{Native}{}
