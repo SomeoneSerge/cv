@@ -1,27 +1,32 @@
 \documentclass{moderncv}
 
-\usepackage{fontspec}
-\setmainfont{CMU Serif}
 
-\usepackage{biblatex}
+\usepackage[inline]{enumitem}
+\usepackage{fontspec}
+\setmainfont[
+  Ligatures=TeX,
+  Extension=.otf,
+  BoldFont=cmunbx,
+  ItalicFont=cmunti,
+  BoldItalicFont=cmunbi,
+]{cmunrm}
+
+\usepackage[natbib=true]{biblatex}
 \addbibresource{main.bib}
 
 \moderncvtheme[black]{classic}
 
-\firstname{Serge}
+\firstname{Sergei}
 \lastname{Kozlukov}
-\title{Applied math student}
-\address{5, Tsimlyanskaya}{109~559~Moscow}
-\mobile{+7~900~945~5929}
+\title{Aspiring mathematician}
+\address{5, Tsimlyanskaya}{109~559~Moscow}{Russia}
+\mobile{+7~(900)~945~5929}
 \email{newkozlukov@gmail.com}
-\extrainfo{https://newkozlukov.github.io/}
+\social[github]{newkozlukov}
+\social[twitter]{newkozlukov}
+\social[linkedin]{newkozlukov}
+\extrainfo{https://newkozlukov.gitlab.io/}
 \photo[64pt]{pic.jpg}
-\quote{
-  $$ J =
-  \mathtt{ProblemSolving} + $$
-$$ + \mathtt{ImpactOnTheWorld} + $$
-$$ - \mathtt{UnmotivatedDecisions}\longrightarrow \sup$$ 
-}
 
 \begin{document}
 \maketitle
@@ -30,40 +35,93 @@ $$ - \mathtt{UnmotivatedDecisions}\longrightarrow \sup$$
 \cvline{Born}{Nov 14, 1996}
 \cvline{Citizenship}{Russia}
 
-\section{Languages}
-\cvlanguage{Russian}{Native}{}
-\cvlanguage{English}{Fluent}{}
-\cvlanguage{German}{Beginner}{}
+\section{Hard skills}
+\cvlistitem{Math.}
+\cvlistitem{Done some time with
+    \texttt{Python},
+    \texttt{C},
+    \texttt{C++},
+    \texttt{Java},
+    \texttt{C\#+.NET},
+    etc
+}
+\cvlistitem{
+    Standard libraries, build systems, version control, tests, etc.
+}
+\cvlistitem{Algorithms and data structures
+(a bit of ICPC, Sedgewick@coursera, etc).}
+\cvlistitem{Networking in \(*\)-nix (\texttt{iproute2}, \texttt{aircrack-ng}, etc).}
+\cvlistitem{Bits of \texttt{Kademlia}, \texttt{cjdns}, onion routing (at least, concept-wise), \texttt{Tox}.}
+\cvlistitem{Bits of systemd,
+very scarce bits of linux kernel familiarity.}
+\cvlistitem{Bits of security (LUKS, GPG, PKI, WoT, CoT, OTR, etc).}
+\cvlistitem{A tiling WM+\texttt{neovim} kind of person.}
+\cvlistitem{Beginning
+to learn \texttt{pytorch} stack. I do not yet
+have experience of any finished DL project.
+However I want to believe that I might've gained over time, as a Mathematician
+and a person who has always been curious about design and development,
+some related skills that would help me close that gap in a short timespan.}
+
+\section{Soft skills}
+\cvlistitem{\textbf{Math}.}
+\cvlistitem{Only learning to communicate with people,
+but I \emph{do} learn.}
+\cvlistitem{Coming from academic environment, I'm probably going to need, at
+    the early stages, some mentorship (in terms of splitting a problem into
+    small steps, maintaining constant progress, etc), as well as oportunity to
+    ask stupid questions, and casual reminders that I shouldn't waste time
+seeking for a "perfect" solution.}
 
 \section{Research interests}
-\cvlistitem{Optimal control}
-\cvlistitem{Dual methods in optimization}
-\cvlistitem{Linear analysis}
-\cvlistitem{Perturbation theory}
-\cvlistitem{Spline interpolation and approximation}
-\cvlistitem{Stochastic processes}
-\cvlistitem{Differentiable programming and DL}
+\cvlistitem{Linear analysis, perturbation theory, method of similar operators.}
+\cvlistitem{B-Splines.}
+\cvlistitem{Optimal control.}
+
+\subsection{Subjects I've no strong background in/subjects under study:}
+\cvlistitem{Optimal transportation theory (Monge-Kantorovich problems).}
+\cvlistitem{\textbf{Geodesics}, Global curvature spaces,
+    concentration inequalities, esp. variance inequality;
+stability of barycenters.}
+\cvlistitem{\textbf{Riemannian optimization}.}
+\cvlistitem{\textbf{Geometric methods in deep learning}.}
+\cvlistitem{\textbf{Hyperbolic deeplearning}.}
+\cvlistitem{Dual methods in optimization, accelerated methods.}
+\cvlistitem{Projective dynamics, FEM, heat methods; anything related
+to simulation of deformable objects;
+anything related to \textbf{VFX}.}
+\cvlistitem{Embedded Linux, U-Boot.}
+\cvlistitem{Coq.}
 
 
 \section{Education}
-\cventry{2009--2012}{Data processing op.}{Center of additional education ``Real
-  School''}{Voronezh}{\textit{all ``A''}}{\textbf{.NET development}, supervised by Dmitry
+\cventry{2009--2012}{Data processing op.}{}{Voronezh}{}{\textbf{.NET development}, supervised by Dmitry
 Babich}
 \cventry{2014--2018}{B.~Sc.}{Voronezh State
   University}{Voronezh}{\textit{with honours}}{
   Mechanics department, then Applied Mathematics and
   Informatics program, then \textbf{Nonlinear Dynamics} department. 
-  Worked on functional analysis and perturbation theory
+  Worked in the field of functional analysis and perturbation theory
   \textbf{supervised by} Dr. Prof. \textbf{Anatoly Baskakov}.
-  In particular studied and applied~\cite{Koz17,Koz18} the abstract method of
-  similar operators~\cite{baskakov1987theorem} developed by Anatoly Baskakov.
+  In particular studied and applied the abstract method of
+  similar operators~\cite{baskakov1987theorem}, developed by Anatoly Baskakov,
+  to the problems of investigating spectral properties of
+  \begin{enumerate*}
+      \item
+          perturbations of the matrix-of-all-ones~\cite{Koz17},
+      \item perturbations of Kronecker products of self-adjoint matrices with simple spectrum~\cite{Koz18}.
+  \end{enumerate*}
 }
 \cventry{2018--present}{M.~Sc.}{Skoltech and Higher School of Economics}%
 {Moscow}{}{}{Statistical Learning Theory}
 
-\section{Work experience}
-\cventry{April~2018--Sep~2018}{Research and software
-  engineering}{Russian3DScanner}{Voronezh}{}{}
+\section{Industry experience}
+\cventry{April~2018--Sep~2018}{R\&D}{\citet{r3ds}}{Voronezh}{}{
+    \textbf{Splines}, mesh deformation tools, facial emotions reconstruction;
+    reproduced results of certain papers, built demos
+    (technologies used: \textbf{\texttt{C++}}, \texttt{Qt}, proprietary \texttt{3D}-stack);
+    studied works of Carl de Boor's related to interpolation and approximation.
+}
 
 \section{Peer-reviewed publications}
 \printbibliography[keyword=peerReviewed,heading=none]
@@ -71,6 +129,10 @@ Babich}
 \section{Talks, conferences}
 \nocite{*}
 \printbibliography[keyword=talk,heading=none]
+
+\section{Languages}
+\cvlanguage{Russian}{Native}{}
+\cvlanguage{English}{Comfortable}{}
 
 \newpage
 \section*{External references}
