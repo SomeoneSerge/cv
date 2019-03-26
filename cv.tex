@@ -1,6 +1,7 @@
-\documentclass{moderncv}
+\documentclass[8pt,a4paper]{moderncv}
 
 
+\usepackage[scale=0.75]{geometry}
 \usepackage[inline]{enumitem}
 \usepackage{fontspec}
 \setmainfont[
@@ -14,7 +15,9 @@
 \usepackage[citestyle=authoryear,natbib]{biblatex}
 \addbibresource{main.bib}
 
-\moderncvtheme[black]{classic}
+
+\moderncvstyle{casual} 
+\moderncvcolor{black}  
 
 \firstname{Sergei}
 \lastname{Kozlukov}
@@ -26,7 +29,7 @@
 \social[twitter]{newkozlukov}
 \social[linkedin]{newkozlukov}
 \extrainfo{https://newkozlukov.gitlab.io/}
-\photo[64pt]{pic.jpg}
+%\photo[64pt]{pic.jpg}
 
 \begin{document}
 \maketitle
@@ -34,6 +37,47 @@
 \section{Personal}
 \cvline{Born}{Nov 14, 1996}
 \cvline{Citizenship}{Russia}
+
+\section{Industry experience}
+\cventry{April~2018--Sep~2018}{R\&D}{\citet{r3ds}}{Voronezh}{}{
+    \textbf{Splines}, mesh deformation tools, facial emotions reconstruction;
+    reproduced results of certain papers, built demos
+    (technologies used: \textbf{\texttt{C++}}, \texttt{\citet{eigen}}, \texttt{Qt}, proprietary \texttt{3D}-stack);
+    studied works of Carl de Boor's related to interpolation and approximation.
+}
+
+\section{Education}
+\cventry{2009--2012}{Data processing op.}{}{Voronezh}{}{\textbf{.NET development}, supervised by Dmitry
+Babich}
+\cventry{2014--2018}{B.~Sc.}{Voronezh State
+  University}{Voronezh}{\textit{with honours}}{
+  Mechanics department, then Applied Mathematics and
+  Informatics program, then Nonlinear Dynamics department. 
+  Functional analysis and perturbation theory,
+  \textbf{supervised by} Dr. Prof. \textbf{Anatoly Baskakov}.
+  Studied~\citep{baskakov1987theorem}, published:
+  \begin{enumerate}
+      \item
+          Perturbations of the matrix-of-all-ones~\citep{Koz17}.
+      \item Perturbations of Kronecker products of self-adjoint matrices with simple spectrum~\citep{Koz18}.
+  \end{enumerate}
+}
+\cventry{2018--present}{M.~Sc.}{Skoltech and Higher School of Economics}%
+{Moscow}{}{}{Statistical Learning Theory.
+Investigating relationship of extendibility of geodesics
+and distnace convexity, supervised by Thibaut Le Gouic.}
+
+\section{Peer-reviewed publications}
+\printbibliography[keyword=peerReviewed,heading=none]
+
+\section{Soft skills}
+\cvlistitem{\textbf{Math}.}
+\cvlistitem{Only learning to communicate with people,
+but I \emph{do} learn.}
+\cvlistitem{Coming from academic environment, might need, at
+    the early stages, some mentorship, as well as oportunity to
+    ask stupid questions, and casual reminders that I shouldn't waste time
+seeking a "perfect" solution.}
 
 \section{Hard skills}
 \cvlistitem{Math.}
@@ -50,6 +94,9 @@
 }
 \cvlistitem{Algorithms and data structures
 (a bit of ICPC, \citet{sedgewickPartI,segdewickPartII}, etc).}
+\cvlistitem{Beginning to learn \texttt{pytorch} stack.}
+
+\section{Other skills}
 \cvlistitem{Networking in \(*\)-nix (\texttt{iproute2}, \texttt{aircrack-ng}, etc).}
 \cvlistitem{Bits of \texttt{Kademlia}~\citep{maymounkov2002kademlia},
 \texttt{cjdns}~\citep{delisle2012cjdns}, onion routing (at least,
@@ -58,83 +105,34 @@ concept-wise), \texttt{Tox}~\citep{tox}.}
 very scarce bits of linux kernel.}
 \cvlistitem{Bits of security (LUKS, GPG, PKI, WoT, CoT, OTR, etc).}
 \cvlistitem{A tiling WM+\texttt{neovim} kind of person.}
-\cvlistitem{Beginning
-to learn \texttt{pytorch} stack. I do not yet
-have experience of any finished DL project.
-However I want to believe that I might've gained over time, as a Mathematician
-and a person who has always been curious about design and development,
-some related skills that would help me close that gap in a short timespan.}
-
-\section{Soft skills}
-\cvlistitem{\textbf{Math}.}
-\cvlistitem{Only learning to communicate with people,
-but I \emph{do} learn.}
-\cvlistitem{Coming from academic environment, I'm probably going to need, at
-    the early stages, some mentorship (in terms of splitting a problem into
-    small steps, maintaining constant progress, etc), as well as oportunity to
-    ask stupid questions, and casual reminders that I shouldn't waste time
-seeking a "perfect" solution.}
 
 \section{Research interests}
 \cvlistitem{Linear analysis, perturbation theory, method of similar operators.}
 \cvlistitem{B-Splines.}
 \cvlistitem{Optimal control.}
 
-\subsection{Subjects I've no strong background in/subjects under study:}
-\cvlistitem{Optimal transportation theory (Monge-Kantorovich problems).}
-\cvlistitem{\textbf{Geodesics}, Global curvature spaces,
+\section{Subjects under study}
+\cvlistitem{\textbf{Geodesics}, global curvature spaces,
     concentration inequalities, esp. variance inequality;
 stability of barycenters.}
 \cvlistitem{\textbf{Riemannian optimization}.}
 \cvlistitem{\textbf{Geometric methods in deep learning}.}
 \cvlistitem{\textbf{Hyperbolic deeplearning}.}
-\cvlistitem{Dual methods in optimization, accelerated methods.}
 \cvlistitem{Projective dynamics, FEM, heat methods; anything related
 to simulation of deformable objects;
 anything related to \textbf{VFX}.}
+\cvlistitem{Dual methods in optimization, accelerated methods.}
+\cvlistitem{Optimal transportation theory (Monge-Kantorovich problems).}
 \cvlistitem{Embedded Linux, U-Boot.}
 \cvlistitem{Coq.}
-
-
-\section{Education}
-\cventry{2009--2012}{Data processing op.}{}{Voronezh}{}{\textbf{.NET development}, supervised by Dmitry
-Babich}
-\cventry{2014--2018}{B.~Sc.}{Voronezh State
-  University}{Voronezh}{\textit{with honours}}{
-  Mechanics department, then Applied Mathematics and
-  Informatics program, then \textbf{Nonlinear Dynamics} department. 
-  Worked in the field of functional analysis and perturbation theory
-  \textbf{supervised by} Dr. Prof. \textbf{Anatoly Baskakov}.
-  In particular studied and applied the abstract method of
-  similar operators~\cite{baskakov1987theorem}, developed by Anatoly Baskakov,
-  to the problems of investigating spectral properties of
-  \begin{enumerate*}
-      \item
-          perturbations of the matrix-of-all-ones~\cite{Koz17},
-      \item perturbations of Kronecker products of self-adjoint matrices with simple spectrum~\cite{Koz18}.
-  \end{enumerate*}
-}
-\cventry{2018--present}{M.~Sc.}{Skoltech and Higher School of Economics}%
-{Moscow}{}{}{Statistical Learning Theory}
-
-\section{Industry experience}
-\cventry{April~2018--Sep~2018}{R\&D}{\citet{r3ds}}{Voronezh}{}{
-    \textbf{Splines}, mesh deformation tools, facial emotions reconstruction;
-    reproduced results of certain papers, built demos
-    (technologies used: \textbf{\texttt{C++}}, \texttt{\citet{eigen}}, \texttt{Qt}, proprietary \texttt{3D}-stack);
-    studied works of Carl de Boor's related to interpolation and approximation.
-}
-
-\section{Peer-reviewed publications}
-\printbibliography[keyword=peerReviewed,heading=none]
-
-\section{Talks, conferences}
-\nocite{*}
-\printbibliography[keyword=talk,heading=none]
 
 \section{Languages}
 \cvlanguage{Russian}{Native}{}
 \cvlanguage{English}{Comfortable}{}
+
+\section{Talks, conferences}
+\nocite{*}
+\printbibliography[keyword=talk,heading=none]
 
 \newpage
 \section*{External references}
