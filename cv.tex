@@ -47,39 +47,108 @@ and hyperbolic neural networks.
 
 \section{Industry}
 \tlcventry{2019/7}{0}{R\&D}{\citet{in3D.io}}{Moscow}{}{
-    Research, software engineering, devops
+    CV research, software engineering, microservices, data collection, devops...
+    It's a work in active progress
 }
 \tlcventry{2018/4}{2018/8}{R\&D}{\citet{r3ds}}{Vorone\'z}{}{
-    B-Splines~\citep{de1978practical,de2012splinefunktionen}, mesh deformation tools, facial expressions reconstruction.
-    Reproducing papers, building demos
-    (tools: \textbf{\texttt{C++}}, \texttt{\citet{eigen}}, \texttt{Qt}, proprietary \texttt{3D}-stack).
+    Constrained in time because of upcoming MSc, I spent most of my R3DS time on research,
+    reproducing papers and building demos, only production thing being small splines-related library.
+    R3DS gave me useful C++ experience, acquiatance with 3D and VFX basics and their open problems.
+    I learned about some mesh deformation techniques, patch-based models for facial expressions, and more.
+    I learned about Eigen, whose clever use of type system not only for implementing
+    both policies, and constraints, and compile-time polymorphism
+    gives almost physical satisfaction.
+    I also discovered for myself the great Carl de Boor~\citep{de1978practical,de2012splinefunktionen},
+    inventor of B-Splines, student of Schoenberg (the ``father of splines'').
+    Carl de Boor turned out to be pretty good at expressing applied problems and solutions
+    in clean and rigorous functional-analytic form, while his lectures
+    on functional analysis and linear algebra, still being rigorous,
+    are grounded on computational considerations.
+    A great example of combining applications and mathematical rigour.
 }
-
 \section{Academia}
 \tlcventry{2018}{2020}{M.~Sc. in Statistical Learning Theory}{Skoltech and Higher School of Economics}%
 {Moscow}{}{
-Investigating relationship of extendibility of geodesics, distance convexity, and variance inequality,
-supervised by Thibaut~Le~Gouic.
-Researching hyperbolic neural networks and hyperbolic embeddings.}
-
+    I applied for SLT program, aspiring to bring one day rigorous "real" math
+    into pretty active applied world of machine learning.
+    I started out with visiting optimal transportation seminars
+    and passing a lot of obligatory courses on optimization.
+    I first wanted to do research with Thibaut Le Gouic, as he was
+    very major and honourable figure in optimal transportation world.
+    I was to continue his research on relationship
+    between variance inequality, and curvature bounds in metric spaces,
+    existence of barycentres and extendibility of geodesics.
+    However, actively involved in mandatory Skoltech courses,
+    I quickly switched to hyperbolic embeddings
+    and hyperbolic neural networks, which we worked on for a course project.
+    This eventually resulted in new research that is still a work in active progress
+    and I hope some day will be published.
+    Now I got more interested in photorealism, and, participating in a startup
+    on human avatars, I hope to do research and thesis on texturing
+    and estimating reflectance information in unconstrained setting
+    (non-static objects, unknown and changing lighting, etc).}
 \tldatecventry{2018}{Spectral properties of perturbations of Kronecker products of self-adjoint matrices with simple spectrum~\citep{Koz18}}{}{}{}{
-Peer-reviewed publication
+    I then generalized the result to Kronecker prodcuts of matrices, for simplicity
+    only considering self-adjoint cases.
 \parbox{.7\linewidth}{}}
 \tldatecventry{2017}{
     Spectral properties of perturbations of the matrix-of-all-ones~\citep{Koz17}}{}{}{}{
-    Peer-reviewed publication}
-
-\tlcventry{2014}{2018}{B.~Sc. in Applied Mathematics}{Vorone\'z State
-  University}{Vorone\'z}{honours}{
-  \begin{flushleft}
-  Mechanics department, then Applied Mathematics and
-  Informatics program, then Nonlinear Dynamics department. 
-  Functional analysis and perturbation theory,
-  \textbf{supervised by} Dr. Prof. \textbf{Anatoly Baskakov}.
-  Studied~\citep{baskakov1987theorem}.
-  \end{flushleft}
+    After learning about the method of similar operators,
+    I applied it to a toy problem of analyzing
+    perturbations of all-ones matrix,
+    gaining more familiarity with fixpoint theory
+    and majorant series techniques in perturbation analysis.
+    This resulted in my first peer-reviewed publication
 }
-\tlcventry{2009}{2012}{A course on ``Data Processing in .NET''}{}{Vorone\'z}{}{A rather generic course on CS/dotnet stack. Supervised by Dmitry Babi\'c}
+
+\tlcventry{2014}{2018}{B.~Sc. in Applied Mathematics}{Vorone\'z State University}{Vorone\'z}{%
+}{\begin{flushleft}
+      Here I started my acquiatance with Mathematics.
+      It all began with the introductory lecture
+      read by my then-to-be friend Valery Kharitonov
+      (who by accidence, had significantly influenced my further path).
+      He provided us with ``proper'' set-theoretic definition of a function.
+      It was that moment when he proved bijective functions to be
+      exactly ones simultaneously injective and surjective,
+      that I realized: all qualities of programming that I respected
+      are in fact characteristic of Math.
+      %
+      I initially got to Mechanics department, and even took
+      two out of three courses on ``Theoretical Mechanics''.
+      But the very next year I switched to department that was more active
+      Math- and coding-wise and had better lecturers.
+      Half of my second year I spent filling in the academic difference
+      (which was eleven additional exams if I remember),
+      meanwhile trying to come to terms with our ICPC team.
+      %
+      It was also the time I acquianted with \textbf{Anatoly Baskakov}, 
+      my future supervisor, who was reading a course titled ``functional analysis''.
+      It was in fact a course on everything, because Anatoly Grigorievi\'c
+      was (just as I) extremely dissatisfied with how Probability Theory
+      was read in our university, and how PDEs were read,
+      and Complex Calculus, and actually Real Calc too.
+      %
+      On my third year my priorities completely shifted from competitive programming
+      to mathematics. Supervised by Anatoly Grigorievi\'c I spent some time
+      on graphs of integral spectra, until I came across his
+      ``method of similar operators''~\citep{baskakov1987theorem}
+      which basically is a means of constructing a nonlinear equation
+      that after application of Banach's fixpoint theorem yields you decent estimates
+      on spectral properties (like eigenvalues and eigenfunctions) of perturbed linear operators,
+      provided you know the spectral structure of unperturbed ideal operator.
+    \end{flushleft}}
+
+\tlcventry{2009}{2012}{A course on ``Data Processing in .NET''}{}{Vorone\'z}{}{
+    Passed a rather generic course on CS/dotnet stack, under supervision of Dmitry Babi\'c.
+    It was more about active independent exploration of all things related
+    (from low-level networking, to web, to 3D graphics)
+    than about the course itself.
+    This period provided me with basic acquiatance
+    of technical side of SWE world, but less so with the teamwork,
+    communication, and discipline aspect.
+    It also led me eventually to the decision
+    that ``\textbf{I need math}''. Purely applied and servile motives!
+}
 
 \newpage
 \section{Supplementary}
