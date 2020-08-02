@@ -23,10 +23,9 @@
 \moderncvstyle{classic} 
 \moderncvcolor{orange}
 
-\firstname{Sergei}
+\firstname{Serge}
 \lastname{Kozlukov}
-\title{Researcher at in3D.io,
-MSc-2 in Statistical Learning Theory at Skoltech and Higher School of Economics}
+\title{Researcher, SWE}
 \address{Ziferblat, 19c1, Kuznetsky Most, 107031, Moscow}{}{}
 \mobile{+7~(900)~945~5929}
 \email{newkozlukov@gmail.com}
@@ -41,52 +40,83 @@ MSc-2 in Statistical Learning Theory at Skoltech and Higher School of Economics}
 \begin{document}
 \maketitle
 
-At the moment, I'm interested in optimization on manifolds,
-photorealistic graphics, inverse graphics,
-and hyperbolic neural networks.
+Current intersts include hyperbolic deep learning and inverse graphics.
+I'm also going to need time that I can invest in learning categories and types,
+and catching up with all sorts of LISPs.
 
 \section{Industry}
-\tlcventry{2019/7}{0}{R\&D}{\citet{in3D.io}}{Moscow}{}{
-    CV research, software engineering, microservices, data collection, devops...
-    It's a work in active progress
+\tlcventry{2020/7}{0}{Backend}{some nameless startup}{Moscow}{}{
+    Taking some time off Academia and doing code-monkey's job.
+    Helps with anxiety and covers the rent.
+}
+\tlcventry{2019/7}{2020/2}{R\&D}{\citet{in3D.io}}{Moscow}{}{
+    Worked with kinect/dynamic fusion-like algorithms,
+    camera calibration and undistortion.
+    (Too) actively maintained back-end
+    (docker, multiple GPUs, redis, segmentation/detection/etc-as-a-service).
+    Took part in introducing DevOps practices.
+    Took RGBD recordings of some dozens of humans.
+    In3D has been an immensely important experience for me, as
+    we've been building the team and the company from scratch, without any such
+    prior experience. We've tried different many configurations, from total
+    anarchy, to daily reports, to offline daily standups, to mandatory offline
+    presence -- collectively searching for the team's optimum.
 }
 \tlcventry{2018/4}{2018/8}{R\&D}{\citet{r3ds}}{Vorone\'z}{}{
-    Constrained in time because of upcoming MSc, I spent most of my R3DS time on research,
-    reproducing papers and building demos, only production thing being small splines-related library.
-    R3DS gave me useful C++ experience, acquiatance with 3D and VFX basics and their open problems.
-    I learned about some mesh deformation techniques, patch-based models for facial expressions, and more.
-    I learned about Eigen, whose clever use of type system not only for implementing
-    both policies, and constraints, and compile-time polymorphism
-    gives almost physical satisfaction.
-    I also discovered for myself the great Carl de Boor~\citep{de1978practical,de2012splinefunktionen},
-    inventor of B-Splines, student of Schoenberg (the ``father of splines'').
-    Carl de Boor turned out to be pretty good at expressing applied problems and solutions
-    in clean and rigorous functional-analytic form, while his lectures
-    on functional analysis and linear algebra, still being rigorous,
-    are grounded on computational considerations.
-    A great example of combining applications and mathematical rigour.
+    Tracking, rigging, mesh-deformation, etc-research,
+    and software engineering.
+    Wrote a small splines library and patch-based face tracker, both
+    admittedly over-engineered.
+    (Timidly) I also may have introduced the team to some new SWE practices and
+    a little different perspective on agile, but I'm not certain.
+    Tech stack included post-11 C++, Qt, qmake, GNU Eigen.
+    This internship was limited in time because of upcoming Master's.
+    During that time I played a little with C++'s type system,
+    learned about VFX industry, learned basics of the rendering
+    pipelines, and also discovered the great Carl de Boor~\citep{de1978practical,de2012splinefunktionen},
+    inventor of B-Splines, student of Isaac ``the father of splines'' Schoenberg,
+    who proved to me once again that applied problems
+    can be expressed in a clean functional-analytic manner
+    and that it is beneficial.
 }
 \section{Academia}
-\tlcventry{2018}{2020}{M.~Sc. in Statistical Learning Theory}{Skoltech and Higher School of Economics}%
+\tldatecventry{2019}{
+    Co-author,~\citep{geoopt}.}{}{}{}{
+    (ICML Workshop (GRL+), previous version presented on ELLIS GRDL Workshop)
+    Presenting the Geoopt package for Riemannian optimization in PyTorch, but
+    also trying to demonstrate an ideology, considering optimization process
+    from both analytic (differential-geometric) and synthetic
+    (metric-geometric) points of view.
+}
+\tldatecventry{2019}{
+    Co-author,~\citep{denoiseBoth}}{}{}{}{
+    (Submitted to 3DV, under review)
+    Overall, the paper is concerned with a semi-supervised procedure
+    for denoising the output of depth sensors.
+    My role was on the implementation side, related to calibration of sensors.
+}
+\tlcventry{2018}{2020}{MS in Statistical Learning Theory}{Skoltech and Higher School of Economics}%
 {Moscow}{}{
-    I applied for SLT program, aspiring to bring one day rigorous "real" math
-    into pretty active applied world of machine learning.
-    I started out with visiting optimal transportation seminars
-    and passing a lot of obligatory courses on optimization.
-    I first wanted to do research with Thibaut Le Gouic, as he was
-    very major and honourable figure in optimal transportation world.
-    I was to continue his research on relationship
-    between variance inequality, and curvature bounds in metric spaces,
-    existence of barycentres and extendibility of geodesics.
-    However, actively involved in mandatory Skoltech courses,
-    I quickly switched to hyperbolic embeddings
-    and hyperbolic neural networks, which we worked on for a course project.
-    This eventually resulted in new research that is still a work in active progress
-    and I hope some day will be published.
-    Now I got more interested in photorealism, and, participating in a startup
-    on human avatars, I hope to do research and thesis on texturing
-    and estimating reflectance information in unconstrained setting
-    (non-static objects, unknown and changing lighting, etc).}
+    On June 8, 2020, I have defended my Master's thesis!
+    The script ``Geometric Deep Learning for Inverse graphics'', is available
+    online~\citep{msThesis}.
+    My Master's degree was some rock-opera sort of story:
+    I have changed three thesis topics and two supervisors, not counting the
+    formal ones. I had (the autumn of 2018) intended to work on optimal
+    transportation with Thibaut Le Gouic, but soon switched to researching
+    hyperbolic neural networks (late winter of 2019),
+    without supervision, collaborating with my peers, Max Kochurov and Rasoul Karimov.
+    Finally, after we had decided our results weren't good enough for NeurIPS,
+    I had a long break (July 2019--February 2020) working on differentiable
+    rendering and fusion-like algorithms, in cooperation with Dmitry
+    Ulyanov. Master's degree was an important opportunity of exploration and
+    self-search. Now that it's done, I see the Master's as a short intermediate
+    stage in the Academic path, which allows one to probe several directions
+    and determine the actual interests before beginning a full-blown PhD.
+    Aside from catching up on differential geometry, I have learned a lot about
+    communication, collaboration, failure, and about positioning myself and my
+    research. Master's also has softened me, somewhat.
+}
 \tldatecventry{2018}{Spectral properties of perturbations of Kronecker products of self-adjoint matrices with simple spectrum~\citep{Koz18}}{}{}{}{
     I then generalized the result to Kronecker prodcuts of matrices, for simplicity
     only considering self-adjoint cases.
@@ -101,53 +131,58 @@ and hyperbolic neural networks.
     This resulted in my first peer-reviewed publication
 }
 
-\tlcventry{2014}{2018}{B.~Sc. in Applied Mathematics}{Vorone\'z State University}{Vorone\'z}{%
+\tlcventry{2014}{2018}{BS in Applied Mathematics}{Vorone\'z State University}{Vorone\'z}{%
 }{\begin{flushleft}
-      Here I started my acquiatance with Mathematics.
-      It all began with the introductory lecture
-      read by my then-to-be friend Valery Kharitonov
-      (who by accidence, had significantly influenced my further path).
-      He provided us with ``proper'' set-theoretic definition of a function.
-      It was that moment when he proved bijective functions to be
-      exactly ones simultaneously injective and surjective,
-      that I realized: all qualities of programming that I respected
-      are in fact characteristic of Math.
-      %
-      I initially got to Mechanics department, and even took
-      two out of three courses on ``Theoretical Mechanics''.
-      But the very next year I switched to department that was more active
-      Math- and coding-wise and had better lecturers.
-      Half of my second year I spent filling in the academic difference
-      (which was eleven additional exams if I remember),
-      meanwhile trying to come to terms with our ICPC team.
-      %
-      It was also the time I acquianted with \textbf{Anatoly Baskakov}, 
-      my future supervisor, who was reading a course titled ``functional analysis''.
-      It was in fact a course on everything, because Anatoly Grigorievi\'c
-      was (just as I) extremely dissatisfied with how Probability Theory
-      was read in our university, and how PDEs were read,
-      and Complex Calculus, and actually Real Calc too.
-      %
-      On my third year my priorities completely shifted from competitive programming
-      to mathematics. Supervised by Anatoly Grigorievi\'c I spent some time
-      on graphs of integral spectra, until I came across his
-      ``method of similar operators''~\citep{baskakov1987theorem}
-      which basically is a means of constructing a nonlinear equation
-      that after application of Banach's fixpoint theorem yields you decent estimates
-      on spectral properties (like eigenvalues and eigenfunctions) of perturbed linear operators,
-      provided you know the spectral structure of unperturbed ideal operator.
+    Perturbation theory, linear functional analysis, ordinary differential
+    equations, optimal control, etc.
+    %
+    Here I started my acquiatance with Mathematics, which to a significant
+    extent is due to (my then-to-be supervisor) Anatoly Baskakov and his
+    students (Yegor Dikarev, Valery Kharitonov, ...).
+    Their group's introductory summer lecture was my first exposure to the
+    ``true mathematics'', after which my second period of self-education
+    began.
+    I initially got to the Mechanics department, and even took
+    two out of three ``Theoretical Mechanics'' courses.
+    However, the mathematical curriculum in that department was
+    hopelessly outdated and I was learning everything by myself
+    from textbooks.
+    The second year, I transitioned to the ``Applied Mathematics and
+    Informatics'' (read CS) department,
+    spending half of the year on fulfilling academic difference,
+    in spare attempting to organize our ICPC team.
+    %
+    That year I acquianted with Anatoly Baskakov,
+    during his ``functional analysis'' course
+    (which in fact was a course about just everything)
+    and research seminar.
+    %
+    By the third year my priorities'd completely shifted from competitive
+    programming to mathematics.
+    Supervised by Anatoly Grigorievi\'c (now in ``nonlinear dynamics'' dpt.)
+    I'd been spending time on graphs of integral spectra, until I came across
+    his ``method of similar operators''~\citep{baskakov1987theorem},
+    related to estimation of spectral properties of perturbed operators.
+    This work has resulted in several peer-reviewed articles and talks.
+    %
+    I had several internships during my BS, all of them (as well as ICPC
+    attempts) have pointed out difficulties in communication (read
+    ``teamwork''), which I worked intensively on later.
+    This period was also associated with certain disappointment regarding
+    software engineering world (base and servile), until the very end of BS,
+    when I started worrying about inapplicability of my mathematics research to
+    real world (which turned me to VFX and then to DL).
     \end{flushleft}}
 
-\tlcventry{2009}{2012}{A course on ``Data Processing in .NET''}{}{Vorone\'z}{}{
-    Passed a rather generic course on CS/dotnet stack, under supervision of Dmitry Babi\'c.
-    It was more about active independent exploration of all things related
-    (from low-level networking, to web, to 3D graphics)
-    than about the course itself.
-    This period provided me with basic acquiatance
-    of technical side of SWE world, but less so with the teamwork,
-    communication, and discipline aspect.
-    It also led me eventually to the decision
-    that ``\textbf{I need math}''. Purely applied and servile motives!
+\tlcventry{2009}{2012}{``Data Processing in .NET'' course}{}{Vorone\'z}{}{
+    A rather generic course on C\#/dotnet stack, under supervision of Dmitry Babi\'c.
+    This period was more about active independent exploration of all things
+    related (from networking, to SQL, to Web, to 3D, to design patterns) than
+    about the course itself.  This period provided me with basic acquiatance of
+    technical side of SWE world, but less so with the teamwork, communication,
+    and disciplines.
+    It has also led me eventually to realize that ``\textbf{I need math}'',
+    even out of purely applied and servile motives!
 }
 
 \newpage
