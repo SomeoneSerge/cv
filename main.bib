@@ -131,4 +131,57 @@
     year={1978},
     publisher={springer-verlag New York}
 }
-
+@inproceedings{denoiseBoth,
+    title={Recording Unsynchronized Lower- and Higher-quality RGB-D Streams To Denoise Them Both},
+    keywords={my,peerReviewed},
+    author={
+        Akhmedkhan Shabanov 
+            and Ilya Krotov 
+            and Nikolay Chinaev 
+            and Vsevolod Poletaev 
+            and Sergei Kozlukov 
+            and Igor Pasechnik 
+            and Bulat Yakupov 
+            and Artsiom Sanakoyeu 
+            and Vadim Lebedev 
+            and Dmitry Ulyanov 
+    },
+    publisher={2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    abstract={
+        Consumer-level depth cameras and depth sensors embedded in mobile devices
+    enable numerous applications, such as pose tracking and face
+    identification. However, the quality of the captured depth is sometimes
+    insufficient for 3D reconstruction and computer vision tasks. In this
+    paper, we propose a self-supervised depth denoising approach that uses
+    unsynchronized streams coming from a pair of consumer-level depth sensors
+    to refine both of them. We record simultaneous sequences with a pair of
+    lower- and higher-quality RGB-D cameras, carefully align them both
+    temporally and spatially, and learn a deep neural network to denoise the
+    lower-quality data using the higher-quality sensor as a source of
+    supervision signal. Notably, we then use the same dataset and learn to
+    upsample and refine higher-quality depth. We experimentally validate our
+    method against state-of-the-art filtering-based and deep denoising
+    techniques and show its application for 3D object reconstruction tasks
+    where our approach leads to more detailed fused surfaces.
+    },
+    year={2020},
+}
+@online{in3Dio,
+    title={in3D.io},
+    url={https://in3d.io/},
+    year={2019}
+}
+@misc{msThesis,
+    title={Geometric Deep Learning for Inverse Graphics, Master's thesis},
+    author={Serge Kozlukov},
+    url={https://github.com/newkozlukov/ms-thesis},
+    year={2020}
+}
+@misc{geoopt,
+    title={Geoopt: Riemannian Optimization in PyTorch},
+    author={Max Kochurov and Rasul Karimov and Serge Kozlukov},
+    year={2020},
+    eprint={2005.02819},
+    archivePrefix={arXiv},
+    primaryClass={cs.CG}
+}
