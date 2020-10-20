@@ -40,83 +40,71 @@
 \begin{document}
 \maketitle
 
-Current intersts include hyperbolic deep learning and inverse graphics.
-I'm also going to need time that I can invest in learning categories and types,
-and catching up with all sorts of LISPs.
+Hyperbolic DL, Inverse Graphics.
 
 \section{Industry}
-\tlcventry{2020/7}{0}{Backend}{some nameless startup}{Moscow}{}{
-    Taking some time off Academia and doing code-monkey's job.
-    Helps with anxiety and covers the rent.
+\tlcventry{2020/7}{2020/9}{Backend}{Freelance}{Moscow}{}{
+    Finished a legacy backend project: introduced means for basic
+    \emph{dependency injection} working around \emph{Flask}'s threadlocals-hell to
+    allow mocking and integration testing (using
+    \href{https://github.com/testcontainers/testcontainers-python}{\emph{testcontainers}}),
+    set up organised validation and error signaling, etc.
 }
 \tlcventry{2019/7}{2020/2}{R\&D}{\citet{in3D.io}}{Moscow}{}{
-    Worked with kinect/dynamic fusion-like algorithms,
-    camera calibration and undistortion.
-    (Too) actively maintained back-end
-    (docker, multiple GPUs, redis, segmentation/detection/etc-as-a-service).
-    Took part in introducing DevOps practices.
-    Took RGBD recordings of some dozens of humans.
-    In3D has been an immensely important experience for me, as
-    we've been building the team and the company from scratch, without any such
-    prior experience. We've tried different many configurations, from total
-    anarchy, to daily reports, to offline daily standups, to mandatory offline
-    presence -- collectively searching for the team's optimum.
+    \emph{Good}:
+    Worked with \emph{volumetric fusion}, camera \emph{calibration}, and
+    undistortion; e.g. came with cheap heuristics for RGBD sequence
+    \emph{decimation}.  Backend (\emph{docker}, \emph{redis}, multi-GPU,
+    model-as-a-service).  Put the beginning to decomposing a 1300LOC
+    \emph{pytorch}-mixed-with-IO untest\{ed|able\} core function...  Took part
+    in introducing minimal \emph{DevOps} practices.  Collected data outdoors.
+    \emph{Challenging}:
+    It was my first time in a newly formed team without established processes.
+    We'd been trying out many different configurations (from anarchy to
+    \emph{agile} and daily standups) and that was a valuable experience.
+    \emph{Bad}:
+    I have repeatedly failed communication-wise.  I made promises I failed to
+    keep, I failed to report in advance the deadlines I was failing, I've
+    several times chosen to ``just do it my way without explaining the reasons,
+    "because it's easier done than said"'' and of course that wasn't conductive
+    to building the \emph{trust}.
 }
 \tlcventry{2018/4}{2018/8}{R\&D}{\citet{r3ds}}{Vorone\'z}{}{
-    Tracking, rigging, mesh-deformation, etc-research,
-    and software engineering.
-    Wrote a small splines library and patch-based face tracker, both
-    admittedly over-engineered.
-    (Timidly) I also may have introduced the team to some new SWE practices and
-    a little different perspective on agile, but I'm not certain.
-    Tech stack included post-11 C++, Qt, qmake, GNU Eigen.
-    This internship was limited in time because of upcoming Master's.
-    During that time I played a little with C++'s type system,
-    learned about VFX industry, learned basics of the rendering
-    pipelines, and also discovered the great Carl de Boor~\citep{de1978practical,de2012splinefunktionen},
-    inventor of B-Splines, student of Isaac ``the father of splines'' Schoenberg,
-    who proved to me once again that applied problems
-    can be expressed in a clean functional-analytic manner
-    and that it is beneficial.
+    \emph{Good}:
+    Wrote a small
+    \emph{B-splines}~\citep{de1978practical,de2012splinefunktionen} library, a
+    patch-based \emph{face tracking} algo, a
+    \href{https://www.dgp.toronto.edu/~karan/pdf/ksinghpaperwire.pdf}{wires}-like
+    deformations demo.  I may have to some extent impacted team's perspective
+    on software design and processes.
+    \emph{Stack}: post-11 C++, Qt, qmake, GNU Eigen.
+    \emph{Bad}: I definitely had over-engineered many things. I wasn't easy
+    in communication. I had a deadlines problem.
 }
 \section{Academia}
+\tlcventry{2018}{2020}{MS in Statistical Learning Theory}{Skoltech and Higher School of Economics}%
+{Moscow}{}{
+    My Master's thesis,
+    ``\href{https://github.com/newkozlukov/ms-thesis/releases}{Geometric Deep
+    Learning for Inverse Graphics}'', finally defended on June 8, is available
+    online~\citep{msThesis}.  It's been a rock-opera style story of active
+    search and a sampling of many different subjects (and people) -- follow the
+    link to learn more!
+}
 \tldatecventry{2019}{
     Co-author,~\citep{geoopt}.}{}{}{}{
     (ICML Workshop (GRL+), previous version presented on ELLIS GRDL Workshop)
-    Presenting the Geoopt package for Riemannian optimization in PyTorch, but
-    also trying to demonstrate an ideology, considering optimization process
-    from both analytic (differential-geometric) and synthetic
-    (metric-geometric) points of view.
+    Geoopt is a package for Riemannian optimization and manifolds-aware models
+    in Pytorch. While the implementation was largely taken care of by Max Kochurov
+    and Rasoul Karimov, I worked out the mathematical grounds and controlled
+    the design.
+    The workshop paper, besides introducing the package, is also trying to
+    demonstrate an ideology of treating the optimization process from both
+    analytic (differential-geometric) and synthetic (metric-geometric) points
+    of view.
 }
 \tldatecventry{2019}{
-    Co-author,~\citep{denoiseBoth}}{}{}{}{
-    (Submitted to 3DV, under review)
-    Overall, the paper is concerned with a semi-supervised procedure
-    for denoising the output of depth sensors.
-    My role was on the implementation side, related to calibration of sensors.
-}
-\tlcventry{2018}{2020}{MS in Statistical Learning Theory}{Skoltech and Higher School of Economics}%
-{Moscow}{}{
-    On June 8, 2020, I have defended my Master's thesis!
-    The script ``Geometric Deep Learning for Inverse graphics'', is available
-    online~\citep{msThesis}.
-    My Master's degree was some rock-opera sort of story:
-    I have changed three thesis topics and two supervisors, not counting the
-    formal ones. I had (the autumn of 2018) intended to work on optimal
-    transportation with Thibaut Le Gouic, but soon switched to researching
-    hyperbolic neural networks (late winter of 2019),
-    without supervision, collaborating with my peers, Max Kochurov and Rasoul Karimov.
-    Finally, after we had decided our results weren't good enough for NeurIPS,
-    I had a long break (July 2019--February 2020) working on differentiable
-    rendering and fusion-like algorithms, in cooperation with Dmitry
-    Ulyanov. Master's degree was an important opportunity of exploration and
-    self-search. Now that it's done, I see the Master's as a short intermediate
-    stage in the Academic path, which allows one to probe several directions
-    and determine the actual interests before beginning a full-blown PhD.
-    Aside from catching up on differential geometry, I have learned a lot about
-    communication, collaboration, failure, and about positioning myself and my
-    research. Master's also has softened me, somewhat.
-}
+    Co-author,~\citep{denoiseBoth}}{}{}{}{Very minor role on the implementation side}
 \tldatecventry{2018}{Spectral properties of perturbations of Kronecker products of self-adjoint matrices with simple spectrum~\citep{Koz18}}{}{}{}{
     I then generalized the result to Kronecker prodcuts of matrices, for simplicity
     only considering self-adjoint cases.
@@ -133,56 +121,27 @@ and catching up with all sorts of LISPs.
 
 \tlcventry{2014}{2018}{BS in Applied Mathematics}{Vorone\'z State University}{Vorone\'z}{%
 }{\begin{flushleft}
-    Perturbation theory, linear functional analysis, ordinary differential
-    equations, optimal control, etc.
+    Learned about spectral perturbation theory~\citep{baskakov1987theorem},
+    linear functional analysis, differential equations, Pontryagin and
+    Bellman's principles in control, etc.
+    \href{https://github.com/newkozlukov/jpcs-2017}{Published my first
+    single-author peer-reviewed papers} in mathematical magazines. Participated
+    in ICPC-esque activities.
     %
-    Here I started my acquiatance with Mathematics, which to a significant
-    extent is due to (my then-to-be supervisor) Anatoly Baskakov and his
-    students (Yegor Dikarev, Valery Kharitonov, ...).
-    Their group's introductory summer lecture was my first exposure to the
-    ``true mathematics'', after which my second period of self-education
-    began.
-    I initially got to the Mechanics department, and even took
-    two out of three ``Theoretical Mechanics'' courses.
-    However, the mathematical curriculum in that department was
-    hopelessly outdated and I was learning everything by myself
-    from textbooks.
-    The second year, I transitioned to the ``Applied Mathematics and
-    Informatics'' (read CS) department,
-    spending half of the year on fulfilling academic difference,
-    in spare attempting to organize our ICPC team.
+    Had some software-engineering style internships locally (\emph{Java},
+    \emph{Spring}, data stuff in \emph{Python}).
     %
-    That year I acquianted with Anatoly Baskakov,
-    during his ``functional analysis'' course
-    (which in fact was a course about just everything)
-    and research seminar.
-    %
-    By the third year my priorities'd completely shifted from competitive
-    programming to mathematics.
-    Supervised by Anatoly Grigorievi\'c (now in ``nonlinear dynamics'' dpt.)
-    I'd been spending time on graphs of integral spectra, until I came across
-    his ``method of similar operators''~\citep{baskakov1987theorem},
-    related to estimation of spectral properties of perturbed operators.
-    This work has resulted in several peer-reviewed articles and talks.
-    %
-    I had several internships during my BS, all of them (as well as ICPC
-    attempts) have pointed out difficulties in communication (read
-    ``teamwork''), which I worked intensively on later.
-    This period was also associated with certain disappointment regarding
-    software engineering world (base and servile), until the very end of BS,
-    when I started worrying about inapplicability of my mathematics research to
-    real world (which turned me to VFX and then to DL).
-    \end{flushleft}}
-
-\tlcventry{2009}{2012}{``Data Processing in .NET'' course}{}{Vorone\'z}{}{
-    A rather generic course on C\#/dotnet stack, under supervision of Dmitry Babi\'c.
-    This period was more about active independent exploration of all things
-    related (from networking, to SQL, to Web, to 3D, to design patterns) than
-    about the course itself.  This period provided me with basic acquiatance of
-    technical side of SWE world, but less so with the teamwork, communication,
-    and disciplines.
-    It has also led me eventually to realize that ``\textbf{I need math}'',
-    even out of purely applied and servile motives!
+    Defended under supervision of Anatoly Grigorievi\'c Baskakov.
+    \end{flushleft}
+}
+\tlcventry{2009}{2012}{Data Processing in .NET}{}{Vorone\'z}{}{
+    That time when I was completely ignoring the school...
+    First \emph{real} acquiantance with a programming language (C\#).  Learned
+    about \texttt{.net} stack, basic datastructures, (the wrong) MVC
+    architecture in web, SQL, ORMs, networking (from sockets to NATs, iptables,
+    and hole-punching), assymetric cryptography, silly attempts at gamedev
+    (XNA), GUI programming (forms, WPF, web frontend) -- you know, ``stuff'',
+    here and there. Under supervision of Dmitry Babi\'c.
 }
 
 \newpage
