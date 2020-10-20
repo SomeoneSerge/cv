@@ -25,51 +25,61 @@
 
 \firstname{Serge}
 \lastname{Kozlukov}
-\title{Researcher, SWE}
+\title{Hyperbolic DL, Inverse Graphics}
 \address{Ziferblat, 19c1, Kuznetsky Most, 107031, Moscow}{}{}
-\mobile{+7~(900)~945~5929}
-\email{newkozlukov@gmail.com}
-% \email{Sergei.Kozlukov@skoltech.ru}
-% \email{svkozlukov@edu.hse.ru}
+\email{newkozlukov AT gmail DOT com}
 \extrainfo{
 \url{https://newkozlukov.gitlab.io/}\\
-\faGithub~\faTwitter~\faLinkedin~\faPaperPlaneO: \texttt{@newkozlukov}
+\faGithub~\faTwitter~\faPaperPlaneO: \texttt{@newkozlukov}
 }
-%\photo[64pt]{pic.jpg}
+\photo[40pt]{pic.jpg}
 
 \begin{document}
 \maketitle
 
-Hyperbolic DL, Inverse Graphics.
+In spare time I'm learning about categories, type theory, reproducible builds
+with Nix, and array/GPU programming in Haskell (that's slow, because I don't
+really have spare time).
 
 \section{Industry}
 \tlcventry{2020/7}{2020/9}{Backend}{Freelance}{Moscow}{}{
-    Finished a legacy backend project: introduced means for basic
+    \emph{Good}:
+    Finished a legacy outsource backend project: introduced means for basic
     \emph{dependency injection} working around \emph{Flask}'s threadlocals-hell to
     allow mocking and integration testing (using
     \href{https://github.com/testcontainers/testcontainers-python}{\emph{testcontainers}}),
-    set up organised validation and error signaling, etc.
+    set up an organised parsing and validation, error signaling, CI, etc.
+    \emph{Bad}: couldn't help getting distracted by concurrent research projects.
 }
 \tlcventry{2019/7}{2020/2}{R\&D}{\citet{in3D.io}}{Moscow}{}{
+    \begin{flushleft}
     \emph{Good}:
     Worked with \emph{volumetric fusion}, camera \emph{calibration}, and
     undistortion; e.g. came with cheap heuristics for RGBD sequence
     \emph{decimation}.  Backend (\emph{docker}, \emph{redis}, multi-GPU,
     model-as-a-service).  Put the beginning to decomposing a 1300LOC
-    \emph{pytorch}-mixed-with-IO untest\{ed|able\} core function...  Took part
-    in introducing minimal \emph{DevOps} practices.  Collected data outdoors.
+    \emph{pytorch}-mixed-with-IO untest\{ed|able\} core function.
+    Introduced minimal \emph{DevOps} practices.  Collected data outdoors.
+    \end{flushleft}
+    \begin{flushleft}
     \emph{Challenging}:
-    It was my first time in a newly formed team without established processes.
+    First time in a newly formed team without established processes.
     We'd been trying out many different configurations (from anarchy to
     \emph{agile} and daily standups) and that was a valuable experience.
-    \emph{Bad}:
-    I have repeatedly failed communication-wise.  I made promises I failed to
-    keep, I failed to report in advance the deadlines I was failing, I've
-    several times chosen to ``just do it my way without explaining the reasons,
-    "because it's easier done than said"'' and of course that wasn't conductive
-    to building the \emph{trust}.
+    \end{flushleft}
+    \begin{flushleft}
+    \emph{Bad}: Communication: I failed to report in advance the deadlines I
+    was failing, I've several times chosen to ``just do it my way without
+    explaining the reasons, "because it's easier done than said"'' and of
+    course that wasn't conductive to building the \emph{trust}.
+    \end{flushleft}
+}
+\tlcventry{2019/6}{2019/8}{Data Engineering}{Accounts chamber}{Moscow}{}{
+    \href{https://github.com/newkozlukov/PyVPO1}{Parsing PDFs and linking raw
+    data from different sources} (an obligatory internship).
 }
 \tlcventry{2018/4}{2018/8}{R\&D}{\citet{r3ds}}{Vorone\'z}{}{
+    \begin{flushleft}
     \emph{Good}:
     Wrote a small
     \emph{B-splines}~\citep{de1978practical,de2012splinefunktionen} library, a
@@ -77,12 +87,19 @@ Hyperbolic DL, Inverse Graphics.
     \href{https://www.dgp.toronto.edu/~karan/pdf/ksinghpaperwire.pdf}{wires}-like
     deformations demo.  I may have to some extent impacted team's perspective
     on software design and processes.
-    \emph{Stack}: post-11 C++, Qt, qmake, GNU Eigen.
+    \end{flushleft}
+    %
+    \begin{flushleft}
+    \emph{Stack}: C++11, Qt, qmake, GNU Eigen.
+    \end{flushleft}
+    %
+    \begin{flushleft}
     \emph{Bad}: I definitely had over-engineered many things. I wasn't easy
     in communication. I had a deadlines problem.
+    \end{flushleft}
 }
 \section{Academia}
-\tlcventry{2018}{2020}{MS in Statistical Learning Theory}{Skoltech and Higher School of Economics}%
+\tlcventry{2018}{2020}{Master's thesis}{Skolkovo Institute of Science and Technology, Higher School of Economics}%
 {Moscow}{}{
     My Master's thesis,
     ``\href{https://github.com/newkozlukov/ms-thesis/releases}{Geometric Deep
@@ -94,14 +111,8 @@ Hyperbolic DL, Inverse Graphics.
 \tldatecventry{2019}{
     Co-author,~\citep{geoopt}.}{}{}{}{
     (ICML Workshop (GRL+), previous version presented on ELLIS GRDL Workshop)
-    Geoopt is a package for Riemannian optimization and manifolds-aware models
-    in Pytorch. While the implementation was largely taken care of by Max Kochurov
-    and Rasoul Karimov, I worked out the mathematical grounds and controlled
-    the design.
-    The workshop paper, besides introducing the package, is also trying to
-    demonstrate an ideology of treating the optimization process from both
-    analytic (differential-geometric) and synthetic (metric-geometric) points
-    of view.
+    While the implementation was largely taken care of by my colleagues, I
+    worked out the mathematical grounds and controlled the design.
 }
 \tldatecventry{2019}{
     Co-author,~\citep{denoiseBoth}}{}{}{}{Very minor role on the implementation side}
