@@ -20,7 +20,7 @@ let
 in
 {
   cv = stdenv.mkDerivation {
-    name = "cv";
+    name = "cv.pdf";
     buildInputs = [ myTexlive ];
       src = ./.;
       FONTCONFIG_FILE = fontsConf;
@@ -28,8 +28,7 @@ in
         latexmk -xelatex cv.tex || (cat cv.log >&2 && exit 1)
       '';
       installPhase = ''
-        mkdir $out
-        install cv.pdf $out/cv.pdf
+        install -m444 cv.pdf $out
       '';
     };
 }
