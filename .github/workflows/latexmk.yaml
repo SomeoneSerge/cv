@@ -1,0 +1,39 @@
+name: "Run latexmk"
+on:
+    create:
+        tags:
+            - "*"
+jobs:
+    latexmk:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+          with:
+              # Nix Flakes doesn't work on shallow clones
+              fetch-depth: 0
+        - uses: cachix/install-nix-action@v11
+          with:
+            install_url: https://github.com/numtide/nix-flakes-installer/releases/download/nix-3.0pre20201007_5257a25/install
+            extra_nix_config: |
+              experimental-features = nix-command flakes
+        - run: nix build
+        - name: Create Release
+          id: create_release
+          uses: actions/create-release@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            tag_name: ${{ github.ref }}
+            release_name: Release ${{ github.ref }}
+            draft: false
+            prerelease: false
+        - name: Upload Release Asset
+          id: upload-release-asset 
+          uses: actions/upload-release-asset@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            upload_url: ${{ steps.create_release.outputs.upload_url }}
+            asset_path: ./result
+            asset_name: cv.pdf
+            asset_content_type: application/pdf
