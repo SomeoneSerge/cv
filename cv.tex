@@ -15,7 +15,7 @@
 \usepackage[citestyle=authoryear,natbib]{biblatex}
 \addbibresource{main.bib}
 
-\usepackage[firstyear=2009,lastyear=2020]{moderntimeline}
+\usepackage[firstyear=2009,lastyear=2025]{moderntimeline}
 \usepackage{fontawesome}
 
 \usepackage{url}
@@ -25,23 +25,34 @@
 
 \firstname{Serge}
 \lastname{Kozlukov}
-\title{Hyperbolic DL, Inverse Graphics}
-\address{Ziferblat, 19c1, Kuznetsky Most, 107031, Moscow}{}{}
-\email{newkozlukov AT gmail DOT com}
+\title{Applied mathematics research}
+\address{Office B310, Konemiehentie 2, 02150 Espoo, Finland}{}{}
+\email{sergei DOT kozlukov AT aalto DOT fi}
 \extrainfo{
-\url{https://newkozlukov.gitlab.io/}\\
-\faGithub~\faTwitter~\faPaperPlaneO: \texttt{@newkozlukov}
+\url{https://someonex.net}\\
+\faGithub~\faTwitter~\faPaperPlaneO: \texttt{@SomeoneSerge}
 }
 \photo[40pt]{pic.jpg}
 
 \begin{document}
 \maketitle
 
-In spare time I'm learning about categories, type theory, reproducible builds
-with Nix, and array/GPU programming in Haskell (that's slow, because I don't
-really have spare time).
-
 \section{Industry}
+\tlcventry{2021/03}{2024}{Working on the PhD thesis}{Visual Computing Group at Aalto}{}{}{
+    Since the Spring of 2021 I'm de facto carrying out doctoral studies under
+    supervision of Jaakko Lehtinen. The general subject of the studies are
+    inverse problems in computer graphics: instead of capturing the appearance
+    of things, I seek to capture a representation that would allow to reproduce
+    the appearance by simulation of the physics.
+}
+\tlcventry{2020/9}{2021/03}{Consulting}{}{}{}{
+    Large-scale structure from motion and localization from images
+}
+\tlcventry{2020/10}{2021/2}{Consulting}{}{}{}{
+    Numerical optimization, realtime camera localization based on custom primitives
+    \emph{Meta}:
+    I'll make an effort to never ever use Bazel any more.
+}
 \tlcventry{2020/7}{2020/9}{Backend}{Freelance}{Moscow}{}{
     \emph{Good}:
     Finished a legacy outsource backend project: introduced means for basic
@@ -49,53 +60,68 @@ really have spare time).
     allow mocking and integration testing (using
     \href{https://github.com/testcontainers/testcontainers-python}{\emph{testcontainers}}),
     set up an organised parsing and validation, error signaling, CI, etc.
-    \emph{Bad}: couldn't help getting distracted by concurrent research projects.
+    \emph{Meta}:
+    Couldn't help getting distracted by the research projects I was carrying out simultaneously.
 }
-\tlcventry{2019/7}{2020/2}{R\&D}{\citet{in3D.io}}{Moscow}{}{
+\tlcventry{2019/7}{2020/2}{Fullstack R\&D}{\citet{in3D.io}}{Moscow}{}{
     \begin{flushleft}
     \emph{Good}:
-    Worked with \emph{volumetric fusion}, camera \emph{calibration}, and
-    undistortion; e.g. came with cheap heuristics for RGBD sequence
-    \emph{decimation}.  Backend (\emph{docker}, \emph{redis}, multi-GPU,
-    model-as-a-service).  Put the beginning to decomposing a 1300LOC
-    \emph{pytorch}-mixed-with-IO untest\{ed|able\} core function.
-    Introduced minimal \emph{DevOps} practices.  Collected data outdoors.
+    Avatars: my first project involving volumetric data, camera and lighting models, and such.
+    I took some part in deployment of the early demos, in setting up a minimal
+        dev-ops, in running experiments and writing some little pieces of the
+        pipeline, and even in collecting the data.
     \end{flushleft}
     \begin{flushleft}
     \emph{Challenging}:
-    First time in a newly formed team without established processes.
-    We'd been trying out many different configurations (from anarchy to
-    \emph{agile} and daily standups) and that was a valuable experience.
+        First time in a newly formed team without any established processes. We
+        had tried many configurations: from pure anarchy, to variations of
+        \emph{agile}, to daily standups. That was... a valuable experience.
     \end{flushleft}
     \begin{flushleft}
-    \emph{Bad}: Communication: I failed to report in advance the deadlines I
-    was failing, I've several times chosen to ``just do it my way without
-    explaining the reasons, "because it's easier done than said"'' and of
-    course that wasn't conductive to building the \emph{trust}.
+    \emph{Meta}:
+        Building trust is a process. It's tempting to
+        give up sleep and try to meet a deadline you already see you're
+        failing, but it is better to inform the team in advance about a
+        failure. It's tempting to say ``I'll just do it my way and let people
+        face the fact, because it's easier done than explained'', but no idea
+        can go too far unless it's picked up by the  team and grown into a
+        collective effort. Oh, by the way, it sounds only natural that one doesn't
+        refactor a piece of code before writing tests for it -- but even such
+        obvious rules don't apply when the communication has failed...
     \end{flushleft}
 }
-\tlcventry{2019/6}{2019/8}{Data Engineering}{Accounts chamber}{Moscow}{}{
-    \href{https://github.com/newkozlukov/PyVPO1}{Parsing PDFs and linking raw
-    data from different sources} (an obligatory internship).
+\tlcventry{2019/6}{2019/8}{Consulting}{Accounts chamber}{Moscow}{}{
+    A gift from Skoltech (that is, a mandatory internship).
+    \href{https://github.com/newkozlukov/PyVPO1}{Parsing PDFs, linking raw
+    data from different sources}, going around toxic people and fanatics.
+    \emph{Meta}:
+    I always knew that anything touched by a government is a-priori bad. Now
+    I've experimentally confirmed the hypothesis and seek no further
+    validation. Also, I'm not a fan of unpaid labour and blackmailing.
 }
 \tlcventry{2018/4}{2018/8}{R\&D}{\citet{r3ds}}{Vorone\'z}{}{
     \begin{flushleft}
     \emph{Good}:
-    Wrote a small
-    \emph{B-splines}~\citep{de1978practical,de2012splinefunktionen} library, a
-    patch-based \emph{face tracking} algo, a
-    \href{https://www.dgp.toronto.edu/~karan/pdf/ksinghpaperwire.pdf}{wires}-like
-    deformations demo.  I may have to some extent impacted team's perspective
-    on software design and processes.
+        The work mostly amounted to writing tools to check out ideas (...and I
+        was supposed to do it quick -- the constraint that I'm not sure I've
+        entirely satisfied), all related, roughly, to geometry processing. I
+        implemented my own
+        \emph{B-splines}~\citep{de1978practical,de2012splinefunktionen}, played
+        with some template-based \emph{face tracking}, and
+        \href{https://www.dgp.toronto.edu/~karan/pdf/ksinghpaperwire.pdf}{deformation
+        models}. I had some quite extensive discussions of software engineering
+        practices and design with the team, and I sometimes think that perhaps
+        I too made some difference.
     \end{flushleft}
     %
     \begin{flushleft}
-    \emph{Stack}: C++11, Qt, qmake, GNU Eigen.
-    \end{flushleft}
-    %
-    \begin{flushleft}
-    \emph{Bad}: I definitely had over-engineered many things. I wasn't easy
-    in communication. I had a deadlines problem.
+    \emph{Meta}:
+        I've confirmed I actually tend to over-engineer things. Over-engineered
+        things are are expensive to maintain. I can be... un-easy in
+        communication. On the other hand, I am by this day inspired by GNU
+        Eigen's use of meta-programming. I'm pretty certain that designing
+        domain-specific languages to make specific complex problems look
+        simpler is exactly our bright future.
     \end{flushleft}
 }
 \section{Academia}
@@ -103,62 +129,67 @@ really have spare time).
 {Moscow}{}{
     My Master's thesis,
     ``\href{https://github.com/newkozlukov/ms-thesis/releases}{Geometric Deep
-    Learning for Inverse Graphics}'', finally defended on June 8, is available
-    online~\citep{msThesis}.  It's been a rock-opera style story of active
-    search and a sampling of many different subjects (and people) -- follow the
-    link to learn more!
+    Learning for Inverse Graphics}'', defended on June 8, is available
+    online~\citep{msThesis}.
 }
 \tldatecventry{2019}{
-    Co-author,~\citep{geoopt}.}{}{}{}{
-    \href{https://arxiv.org/abs/2005.02819}{(ICML Workshop (GRL+), previous
-    version presented on ELLIS GRDL Workshop)} While the implementation was
-    largely taken care of by my colleagues, I worked out the mathematical
-    grounds and controlled the design.
+    Co-author,~\citep{geoopt}}{}{}{}{
+    \href{https://arxiv.org/abs/2005.02819}{(ICML GRL+ Workshop; previous
+    version presented on ELLIS GRDL Workshop)}
+    As with my other collaborations
+    with Max,~Rasoul,\&co, I worked out the mathematical grounds and carried out the
+    discussions of the software design.
 }
 \tldatecventry{2019}{
-    Co-author,~\citep{denoiseBoth}}{}{}{}{\href{https://arxiv.org/abs/2009.04776}{Depth
-denoising}. Very minor, almost neglegible, role on the implementation side}
+    Co-author,~\citep{denoiseBoth}}{}{}{}{
+    \href{https://arxiv.org/abs/2009.04776}A
+very minor, neglegible, part in the implementation (something to do with
+undistortion of pictures taken with a lense)}
 \tldatecventry{2018}{\href{https://github.com/newkozlukov/jpcs-2017}{Spectral
 properties of perturbations of Kronecker products of self-adjoint matrices with
 simple spectrum~\citep{Koz18}}}{}{}{}{
-    I then generalized the result to Kronecker prodcuts of matrices, for simplicity
-    only considering self-adjoint cases.
+    I then generalized the result to Kronecker prodcuts of matrices, for
+    simplicity only considering self-adjoint cases. The intenion was to proceed
+    with a general Banachs-space setting (infinite dimensions) but never got
+    around to actually carry that out.
 \parbox{.7\linewidth}{}}
 \tldatecventry{2017}{
     \href{https://github.com/newkozlukov/current-problems-2017/blob/master/current-problems-2017.tex}{Spectral
     properties of perturbations of the
     matrix-of-all-ones~\citep{Koz17}}}{}{}{}{
-    After learning about the method of similar operators,
-    I applied it to a toy problem of analyzing
-    perturbations of all-ones matrix,
-    gaining more familiarity with fixpoint theory
-    and majorant series techniques in perturbation analysis.
-    This resulted in my first peer-reviewed publication
+    Having learned about the method of similar operators, I applied it to a toy
+    problem: characterizing the spectra and the eigenvectors of perturbations
+    of full-ones matrices. I gained more familiarity with the fix-point theory,
+    the majorant series techniques, and, genereally, the perturbation analysis.
+    This also resulted in my first peer-reviewed publication
 }
 
-\tlcventry{2014}{2018}{BS in Applied Mathematics}{Vorone\'z State University}{Vorone\'z}{%
+\tlcventry{2014}{2018}{Bachelor's thesis}{Vorone\'z State University}{Vorone\'z}{%
 }{\begin{flushleft}
-    Learned about spectral perturbation theory~\citep{baskakov1987theorem},
-    linear functional analysis, differential equations, Pontryagin and
-    Bellman's principles in control, etc.
+    Bachelor's degree, supervised by \href{www.mathnet.ru/eng/person8559}{Anatoly Grigorievi\'c Baskakov}.
+    %
+    A delve into spectral perturbation theory~\citep{baskakov1987theorem},
+    ``linear functional analysis'', differential equations, etc.
+    We'd talk a lot about solutions of differential equations and optimal control problems
+    without actually solving any.
     \href{https://github.com/newkozlukov/jpcs-2017}{Published my first
-    single-author peer-reviewed papers} in mathematical magazines. Participated
-    in ICPC-esque activities.
-    %
-    Had some software-engineering style internships locally (\emph{Java},
-    \emph{Spring}, data stuff in \emph{Python}).
-    %
-    Defended under supervision of \href{www.mathnet.ru/eng/person8559}{Anatoly Grigorievi\'c Baskakov}.
+    single-author peer-reviewed papers} in mathematical magazines.
+    I focused on Mathematics for my Bachelor's, but in spare time I had some
+    fun trying to make it in competitive programming (rather unsuccessfully)
+    and further messing with mildly technical stuff
     \end{flushleft}
 }
 \tlcventry{2009}{2012}{Data Processing in .NET}{}{Vorone\'z}{}{
-    The kid was completely ignoring the school...
-    First \emph{real} acquiantance with a programming language (C\#).  Learned
-    about \texttt{.net} stack, basic datastructures, (the wrong) MVC
-    architecture in web, SQL, ORMs, networking (from sockets to NATs, iptables,
-    and hole-punching), assymetric cryptography, silly attempts at gamedev
-    (XNA), GUI programming (forms, WPF, web frontend) -- ``stuff'', here and
-    there. Under supervision of Dmitry Babi\'c.
+    I didn't like school, so I found something better. First acquiantance with
+    C\# and the \texttt{.net} stack, basic datastructures, the (wrong, as Uncle
+    Bob would say) MVC architecture, SQL, ORMs, sockets and NATs, cryptographic
+    primitives, silly carricatures of gamedev (XNA), GUI programming (forms,
+    WPF, web frontend) -- learning ``stuff'', here and there. Under supervision
+    of Dmitry Babi\'c.
+    \begin{flushleft}
+    \emph{Meta}: I had my repentance early during my Bachelor's. Now I'm not
+        touching any Microsoft-tied tools and products. Amen
+    \end{flushleft}
 }
 
 \newpage

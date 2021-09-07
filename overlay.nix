@@ -1,8 +1,8 @@
-{ nixpkgs ? import <nixpkgs> {} }:
+final: prev:
 
-with nixpkgs;
+with prev;
 
-let
+{
   myTexlive = with pkgs.texlive; (
     combine {
       inherit (pkgs.texlive)
@@ -12,18 +12,16 @@ let
       moderncv moderntimeline;
     }
   );
-  fontsConf = pkgs.makeFontsConf {
+  myFontsConf = pkgs.makeFontsConf {
     fontDirectories = [ 
-      "${myTexlive}/share/texmf/"
+      "${final.myTexlive}/share/texmf/"
     ];
   };
-in
-{
   cv = stdenv.mkDerivation {
     name = "cv.pdf";
-    buildInputs = [ myTexlive ];
+    buildInputs = [ final.myTexlive ];
       src = ./.;
-      FONTCONFIG_FILE = fontsConf;
+      FONTCONFIG_FILE = final.myFontsConf;
       buildPhase = ''
         latexmk -xelatex cv.tex || (cat cv.log >&2 && exit 1)
       '';
