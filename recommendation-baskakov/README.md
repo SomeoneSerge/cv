@@ -1,2 +1,1 @@
-Recommendation to Skoltech.
-Because of Anatoly Grigorievic's health circumstances I had to typeset the recommendation myself.
+The recommendation letter I applied to Skoltech with. Why on earth it resides in this repository?

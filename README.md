@@ -1,7 +1,6 @@
 # Someone's CV
 
-With nix-unstable:
-
 ```bash
-nix build github:newkozlukov/cv
+nix build github:SomeoneSerge/cv
+xdg-open result
 ```

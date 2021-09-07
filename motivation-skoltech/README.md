@@ -1,1 +1,1 @@
-Motivation letter for Skoltech
+The motivation letter I've applied to Skoltech with
