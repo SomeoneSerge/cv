@@ -3,30 +3,39 @@ final: prev:
 with prev;
 
 {
-  myTexlive = with pkgs.texlive; (
+  myTexlive = with final.texlive; (
     combine {
-      inherit (pkgs.texlive)
-      scheme-medium latexmk enumitem
-      cm-unicode fontawesome
-      biblatex biber
-      moderncv moderntimeline;
+      inherit (final.texlive)
+        academicons
+        arydshln
+        biber
+        biblatex
+        cm-unicode
+        enumitem
+        fontawesome5
+        latexmk
+        moderncv
+        moderntimeline
+        multirow
+        scheme-medium
+        ;
     }
   );
-  myFontsConf = pkgs.makeFontsConf {
-    fontDirectories = [ 
+  myFontsConf = final.makeFontsConf {
+    fontDirectories = [
       "${final.myTexlive}/share/texmf/"
     ];
   };
   cv = stdenv.mkDerivation {
     name = "cv.pdf";
     buildInputs = [ final.myTexlive ];
-      src = ./.;
-      FONTCONFIG_FILE = final.myFontsConf;
-      buildPhase = ''
-        latexmk -xelatex cv.tex || (cat cv.log >&2 && exit 1)
-      '';
-      installPhase = ''
-        install -m444 cv.pdf $out
-      '';
-    };
+    src = ./.;
+    FONTCONFIG_FILE = final.myFontsConf;
+    buildPhase = ''
+      (latexmk -xelatex cv.tex |& uniq) || (echo "[E] .log file:" ; uniq < cv.log >&2 ; exit 1)
+    '';
+    installPhase = ''
+      install -m444 cv.pdf $out
+    '';
+  };
 }
