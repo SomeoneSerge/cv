@@ -1,38 +1,21 @@
 name: "Run latexmk"
 on:
-    create:
-        tags:
-            - "*"
-    workflow_dispatch:
+  push:
+  workflow_dispatch:
 jobs:
-    latexmk:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Checkout repository
-          uses: actions/checkout@v4
-        - name: Install Nix
-          uses: DeterminateSystems/nix-installer-action@v4
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-        - uses: DeterminateSystems/magic-nix-cache-action@v2
-        - run: nix build
-        - name: Create Release
-          id: create_release
-          uses: actions/create-release@v1
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-            tag_name: ${{ github.ref }}
-            release_name: Release ${{ github.ref }}
-            draft: false
-            prerelease: false
-        - name: Upload Release Asset
-          id: upload-release-asset 
-          uses: actions/upload-release-asset@v1
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-            upload_url: ${{ steps.create_release.outputs.upload_url }}
-            asset_path: ./result
-            asset_name: cv.pdf
-            asset_content_type: application/pdf
+  latexmk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: DeterminateSystems/magic-nix-cache-action@v2
+      - run: nix build -o cv.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: cv.pdf
