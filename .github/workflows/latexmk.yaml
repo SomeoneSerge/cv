@@ -1,21 +1,21 @@
 name: "Run latexmk"
 on:
-    push:
-    workflow_dispatch:
+  push:
+  workflow_dispatch:
 jobs:
-    latexmk:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Checkout repository
-          uses: actions/checkout@v3
-        - name: Install Nix
-          uses: DeterminateSystems/nix-installer-action@v4
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-        - uses: DeterminateSystems/magic-nix-cache-action@v2
-        - run: nix build -o cv.pdf
-        - name: Release
-          uses: softprops/action-gh-release@v1
-          if: startsWith(github.ref, 'refs/tags/')
-          with:
-            files: cv.pdf
+  latexmk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: DeterminateSystems/magic-nix-cache-action@v2
+      - run: nix build -o cv.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: cv.pdf
