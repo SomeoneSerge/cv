@@ -23,87 +23,88 @@
 \moderncvstyle{classic} 
 \moderncvcolor{orange}
 
-\firstname{Sergei}
-\lastname{K}
-\title{data-driven algorithms, mathematical modeling, automation \& reproducibility}
-\address{B310, 2, Konemiehentie, 02150 Espoo, Finland}{}{}
-\email{sergei DOT kozlukov AT aalto DOT fi}
+\firstname{SomeoneSerge}
+\lastname{}
+\title{data-driven algorithms, mathematical modeling, reliability}
+% \address{...}{}{}
+\email{else@someonex.net}
 \extrainfo{%
     \httplink[@ss:someonex.net]{matrix.to/\#/@ss:someonex.net}~%
     \url{https://someonex.net}\\
+    \httplink[{\faGithub}~\texttt{@SomeoneSerge}]{github.com/SomeoneSerge/}
     \httplink[\faOrcid]{orcid.org/0000-0002-4951-4497}~%
     \httplink[\faIcon{graduation-cap}]{scholar.google.com/citations?user=OCo1DVYAAAAJ}
-    \httplink[{\faTwitter}]{twitter.com/SomeoneSerge}~%
-    \httplink[{\faGithub}~\texttt{@SomeoneSerge}]{github.com/SomeoneSerge/}
     \httplink[\faMastodon~@nobody@mastodon.acm.org]{mastodon.acm.org/@nobody}
 }
-\photo[40pt]{pic.jpg}
+\photo[42pt]{pic.jpg}
 
 \begin{document}
 \maketitle
 
-\section{Skills and interests}
+\section{Intro}
 
-I seek problems that people don't yet care enough about. I enjoy (certain kinds
-of) mathematics. I like to make things fast and parallel, but not at the cost
-of excess complexity. Having worked in teams and on my own, I do prefer working
-with people and in cooperative environments. I like static types and often
-prefer the ``straightforward'' imperative code with minimal and contained state
-over heavy abstractions that ``functional'' approaches sometimes give rise to.
-E.g.\ today my needs are mostly satisfied with C++, Python, and Nix. I'm open
-to new tools and new problems, and there's always more to learn.
+SomeoneSerge trades in making complex systems simpler.
 
 \section{Previous work}
-\tlcventry{2021/03}{2025/02}{\href{https://research.aalto.fi/en/persons/sergei-kozlukov}{Doctoral Research~\faIcon{user-graduate}}}{Visual Computing Group at the Aalto University}{}{}{
-	My PhD thesis is concerned with inverse problems in graphics,
-	computer vision, image matching. I prioritize insights that
-	could only be obtained with the use of problem-specific interactive
-	visualization and inspection tools developed ad hoc.
+\tlcventry{2024/10}{0}{Consulting as a sole proprietor~\faIcon{handshake}}{\httplink[tmi.someonex.net]{tmi.someonex.net}}{Helsinki}{}{
+	I offer consulting services on per-project and hourly bases.
 }
-\tlcventry{2022/03}{0}{\httplink[Package maintenance]{nixos.org/community/teams/cuda}}{\httplink[github.com/NixOS/nixpkgs~\faSnowflake]{github.com/NixOS/nixpkgs/}}{}{}{
-	\httplink[CUDA]{nixos.org/manual/nixpkgs/unstable/\#cuda} and
-	HPC support in~\httplink[nixpkgs]{github.com/NixOS/nixpkgs/}, on a
-	voluntary basis. Maintaining~\cite{someone-repology} a number of packages,
-	contributing and reviewing
-	changes~\cite{someone-nixpkgs-prs,someone-nixpkgs-reviews} relevant to my
-	work. Running an out-of-tree CI~\cite{someone-nixpkgs-cuda-ci}~\faIcon{cloud} for the
-	scientific computing packages that rely on ``unfree'' dependencies. Member
-	of the NixOS' CUDA maintenance team~\cite{nixpkgs-cuda-team}.
+\tlcventry{2022/03}{0}{\httplink[Nixpkgs duties]{nixos.org/community/teams/cuda}}{\httplink[github.com/NixOS/nixpkgs~\faSnowflake]{github.com/NixOS/nixpkgs/}}{}{}{
+	Nixpkgs is an ὰγορα or meydan-like space where people collectively decide how pieces of potentially conflicting computer software may be reliably put together.
+	It is an executable ``Wikipedia''.
+	I consume Nixpkgs for most of my enterprises, and I participate in Nixpkgs' life.~\cite{someone-repology,someone-nixpkgs-prs,someone-nixpkgs-reviews,someone-nixpkgs-cuda-ci,nixpkgs-cuda-team,someone-nixos-discourse,nix-dev-dialogues-23,ftn24}
+	Examples of what I worked with include: CUDA and ROCm, SLURM and MPI, Python, setup-hooks, CMake, cc-wrapper, dynamic loading, cross-compilation, ``AI and LLM tools''.
+	I broke and fixed things.
+	I mentored a GSoC project for NixOS.~\cite{evanixReport,evanixProposal,evanix}.
+    I helped to organize a local Nix user group in Helsinki~\cite{nixInHelsinki}.
 }
-\cventry{2019/7--2021/3}{Consulting~\faIcon{handshake}}{DM for contacts and details}{Moscow}{}{
-	Working on a per-project basis for a variety of employers and teams:
+\tlcventry{2019/7}{2021/3}{Consulting as a sole proprietor~\faIcon{handshake}}{DM for contacts and details}{Moscow}{}{
+	I offer consulting services on the project and hourly bases. Examples of what I've worked on:
 	\begin{itemize*}[before={\@},itemjoin={\quad}]
-		\item Implementing and tuning custom routines for low-latency (streaming video) image-based \faCamera~camera localization. Contacts: ask in DM\@.
-		\item Overlooking progress in bootstrapping domain-specific ``AI'' models. Contacts: DM\@.
-		\item Overlooking a project concerned with large-scale structure from motion and image-based \faCamera~camera localization. Contacts:~\httplink[@rudyryk]{https://github.com/rudyryk}.
-		\item Maintaining and extending basic CRUD applications, covering with tests and refactoring existing codebases~\httplink[@rudyryk]{https://github.com/rudyryk}.
-		\item Startup-style \faRunning~``full-stack'' work: demo apps, experiments, experiment infrastructure, dataset collection, CRUD\@. Context: human avatars from \faVideo~video. Contacts: DM\@.
+		\item Image-based \faCamera~camera localization and SfM
+		\item Custom routines for low-latency (streaming video) numerical optimization
+        \item Automatic differentiation
+		\item Bootstrapping domain-specific ``AI''~models
+		\item Basic CRUD, web, refactoring and testing
+        \item Working with legacy codebases
+		\item Human avatar reconstruction
+		\item \faRunning~``Any-key'' work: demos, experiments, infrastructure, dataset collection
 	\end{itemize*}
 }
-\tlcventry{2018}{2020}{MSc in Computer Science~\faIcon{user-graduate}}{Skolkovo Institute of Science and Technology, Higher School of Economics}%
+\tlcventry{2018/4}{2018/8}{RnD}{\citet{r3ds}}{Vorone\'z}{}{
+	Numerical algorithms, \faCube~geometry processing for VFX
+}
+\section{Academic record}
+
+I've been walking on and off the academic track, in search of a venue where people focus on exploring the unknown, solve problems the principled way, and take bigger risks (unsurprisingly, Academia is not that).
+
+\tlcventry{2021/03}{0}{\href{https://research.aalto.fi/en/persons/sergei-kozlukov}{Doctoral Research~\faIcon{user-graduate}}}{Visual Computing Group at the Aalto University}{}{}{
+	I work on a PhD thesis concerned with ``computer vision'' and inverse problems in graphics.
+}
+\tlcventry{2018}{2020}{MSc in Computer Science (Statistical Learning Theory)~\faIcon{user-graduate}}{Skolkovo Institute of Science and Technology, Higher School of Economics}%
 {Moscow}{}{
-	Worked on and defended my Master's thesis,
+	Master's thesis:
 	``\href{https://www.hse.ru/en/edu/vkr/368168926}{Geometric Deep
 		Learning for Inverse Graphics}''~\citep{msThesis}.
 	Edited version available on~\href{https://github.com/SomeoneSerge/ms-thesis/releases}{GitHub}.
 	Cf.~also~\cite{geoopt}.
 }
-\tlcventry{2018/4}{2018/8}{Consulting~\faIcon{handshake}}{\citet{r3ds}}{Vorone\'z}{}{
-	Implementation of numerical algorithms (numerical optimization, \faCube~geometry processing) and demo apps.
-}
 \tlcventry{2014}{2018}{BSc in Applied Mathematics~\faIcon{user-graduate}}{Vorone\'z State University}{Vorone\'z}{%
 }{
-	Worked on and defended my Bachelor's thesis, supervised by
-	\href{www.mathnet.ru/eng/person8559}{Anatoly Grigorievi\'c Baskakov}, and
-	largely building upon his~\citep{baskakov1987theorem}.
-	The original thesis is only available in Russian, but it is mostly a compilation of the previously published results~\cite{someone-jpcs-2017,someone-volsu-2017,someone-vspu-2016}.
+	Bachelor's thesis, supervised by
+	\href{www.mathnet.ru/eng/person8559}{Anatoly Grigorievi\'c Baskakov},
+	largely building upon his~\citep{baskakov1987theorem}:~\cite{someone-jpcs-2017,someone-volsu-2017,someone-vspu-2016}.
 }
-\section{Speaking and writing}
+
+
+\section{Speaking, writing, public presence}
 \tllabelcventry{2021}{2025}{2021--2025 (DSc period)}{}{}{}{}{
-	Spoke at the NixCon'23~\faIcon[regular]{snowflake}~\cite{someone-nixcon23}.
-	Participated in the \httplink[OceanSprint'23]{https://oceansprint.org/}
-	(report upcoming). Upcoming: 2023--12--07,
-	\httplink[2023 Nix Developer Dialogues]{https://discourse.nixos.org/t/2023-nix-developer-dialogues-live-stream/35386}.
+	\httplink[NixCamp'24]{https://nix.camp/},
+	\httplink[Nix in Helsinki]{https://nix-fi.github.io},
+	\httplink[Full-Time Nix Podcast]{https://fulltimenix.com/episodes/someoneserge}~\citep{ftn24},
+	\httplink[2023 Nix Developer Dialogues]{https://discourse.nixos.org/t/2023-nix-developer-dialogues-live-stream/35386}~\citep{nix-dev-dialogues-23},
+	\httplink[OceanSprint'23]{https://oceansprint.org/},
+	NixCon'23~\faIcon[regular]{snowflake}~\cite{someone-nixcon23}.
 }
 \tllabelcventry{2018}{2020}{2018--2020 (MSc period)}{}{}{}{}{
 	Co-authored and presented~\cite{someone-hse-manopt} the \citet{geoopt}.
