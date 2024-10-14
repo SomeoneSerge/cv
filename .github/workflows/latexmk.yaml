@@ -9,7 +9,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     - name: Install Nix
-      uses: DeterminateSystems/nix-installer-action@v13
+      uses: DeterminateSystems/nix-installer-action@v14
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
     - uses: DeterminateSystems/magic-nix-cache-action@v7
