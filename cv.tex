@@ -1,9 +1,5 @@
-\documentclass[10pt,a4paper]{moderncv}
+\documentclass[a4paper]{scrartcl}
 
-
-\usepackage[margin=1.5cm]{geometry}
-\usepackage[inline]{enumitem}
-\usepackage{multicol}
 \usepackage{fontspec}
 \setmainfont[
   Ligatures=TeX,
@@ -12,45 +8,44 @@
   ItalicFont=cmunti,
   BoldItalicFont=cmunbi,
 ]{cmunrm}
+
 \usepackage[citestyle=authoryear,style=alphabetic,natbib]{biblatex}
 \addbibresource{main.bib}
-
-\usepackage[firstyear=2014,lastyear=2028]{moderntimeline}
 \usepackage{fontawesome5}
-
 \usepackage{url}
+\usepackage{tikz}
+\usepackage[inline]{enumitem}
 
-\moderncvstyle{classic} 
-\moderncvcolor{orange}
-
-\firstname{SomeoneSerge}
-\lastname{}
+\NewDocumentCommand\acadtitle{}{MSc}
+\NewDocumentCommand\firstname{}{SomeoneSerge}
+\NewDocumentCommand\familyname{}{}
 \title{data-driven algorithms, mathematical modeling}
 % \address{...}{}{}
-\email{else@someonex.net}
-\extrainfo{%
+\NewDocumentCommand\email{}{else@someonex.net}
+\NewDocumentCommand\extrainfo{}{%
     \httplink[@ss:someonex.net]{matrix.to/\#/@ss:someonex.net}~%
-    \url{https://someonex.net}\\
-    \url{https://tmi.someonex.net}\\
+    \httplink{someonex.net}\\
     \httplink[{\faGithub}~\texttt{@SomeoneSerge}]{github.com/SomeoneSerge/}
     \httplink[\faOrcid]{orcid.org/0000-0002-4951-4497}~%
     \httplink[\faIcon{graduation-cap}]{scholar.google.com/citations?user=OCo1DVYAAAAJ}
-    \httplink[\faMastodon~@nobody@mastodon.acm.org]{mastodon.acm.org/@nobody}
+    \httplink[\faMastodon~@nobody@mastodon.acm.org]{mastodon.acm.org/@nobody}%
 }
-\photo[42pt]{pic.jpg}
+
+\usepackage[red]{koma-moderncvclassic}
+\photo[default]{50pt}{pic.jpg}
 
 \begin{document}
 \maketitle
 
-\section{Intro}
+\section{Bio}
 
-SomeoneSerge trades in making complex systems simpler.
+Making complex systems simpler.
 
 \section{Previous work}
-\tlcventry{2024/10}{0}{Consulting as a sole proprietor~\faIcon{handshake}}{\httplink[tmi.someonex.net]{tmi.someonex.net}}{Helsinki}{}{
-	I offer consulting services on per-project and hourly bases.
+\cventry{2024/10--present}{Sole proprietor~\faIcon{handshake}}{\httplink[tmi.someonex.net]{tmi.someonex.net}}{Helsinki}{}{
+    Consulting services
 }
-\tlcventry{2022/03}{0}{\httplink[Nixpkgs development]{nixos.org/community/teams/cuda}}{\httplink[github.com/NixOS/nixpkgs~\faSnowflake]{github.com/NixOS/nixpkgs/}}{}{}{
+\cventry{2022/03--present}{\httplink[Nixpkgs development]{nixos.org/community/teams/cuda}}{\httplink[github.com/NixOS/nixpkgs~\faSnowflake]{github.com/NixOS/nixpkgs/}}{}{}{
 	Nixpkgs is an ὰγορα or meydan-like space where people collectively decide how pieces of potentially conflicting computer software may be reliably put together.
 	It is the executable ``Wikipedia'' of free software.
 	I consume Nixpkgs for most of my enterprises, and I participate in Nixpkgs' life.~\cite{someone-repology,someone-nixpkgs-prs,someone-nixpkgs-cuda-ci,nixpkgs-cuda-team,someone-nixos-discourse,nix-dev-dialogues-23,ftn24}
@@ -59,7 +54,7 @@ SomeoneSerge trades in making complex systems simpler.
 	Mentored a GSoC project for the NixOS Foundation.~\cite{evanixReport,evanixProposal,evanix}.
 	Helped to organize a local Nix user group in Helsinki~\cite{nixInHelsinki}.
 }
-\tlcventry{2019/7}{2021/3}{Consulting as self-employed~\faIcon{handshake}}{DM for contacts and details}{Moscow}{}{
+\cventry{2019/7--2021/3}{Consulting as self-employed~\faIcon{handshake}}{DM for contacts and details}{Moscow}{}{
 	I offer consulting services on the project and hourly bases. Examples of what I've worked on:
 	\begin{itemize*}[before={\@},itemjoin={\quad}]
 		\item Image-based \faCamera~camera localization and SfM
@@ -72,20 +67,22 @@ SomeoneSerge trades in making complex systems simpler.
 		\item \faRunning~``Any-key'' work: demos, experiments, infrastructure, dataset collection
 	\end{itemize*}
 }
-\tlcventry{2018/4}{2018/8}{RnD}{\citet{r3ds}}{Vorone\'z}{}{
+\cventry{2018/4--2018/8}{RnD}{\citet{r3ds}}{Vorone\'z}{}{
 	Numerical algorithms, \faCube~geometry processing for VFX
 }
-\section{Academic record}
+\section{Academia}
 
-I've been walking on and off the academic track, in search of a venue where people focus on exploring the unknown, solve problems the principled way, and take bigger risks (Academia may not necessarily be any of that).
+Walking on and off the academic track, in search of a venue where people focus
+on exploring the unknown, solve problems the principled way, and take bigger risks
+(Academia may not necessarily be any of that).
 
-\tlcventry{2021/03}{0}{\href{https://research.aalto.fi/en/persons/sergei-kozlukov}{Doctoral Research~\faIcon{user-graduate}}}{Visual Computing Group, Aalto U, Espoo, Finland}{}{}{
+\cventry{2021/03--present}{\href{https://research.aalto.fi/en/persons/sergei-kozlukov}{Doctoral Research~\faIcon{user-graduate}}}{Visual Computing Group, Aalto U, Espoo, Finland}{}{}{
 	I work at the Aalto University~\citep{erc-pipelehtinen}
 	on a PhD thesis aspiring to democratize, in terms of cost, complexity, and
 	reliability, methods and tools for ``computer vision'' and, generally,
 	inverse graphics problems.
 }
-\tlcventry{2018}{2020}{MSc in Computer Science (Statistical Learning Theory)~\faIcon{user-graduate}}{Skolkovo Institute of Science and Technology, Higher School of Economics}%
+\cventry{2018--2020}{MSc in Computer Science (Statistical Learning Theory)~\faIcon{user-graduate}}{Skolkovo Institute of Science and Technology, Higher School of Economics}%
 {Moscow}{}{
 	Master's thesis:
 	``\href{https://www.hse.ru/en/edu/vkr/368168926}{Geometric Deep
@@ -93,7 +90,7 @@ I've been walking on and off the academic track, in search of a venue where peop
 	Edited version hosted on~\href{https://github.com/SomeoneSerge/ms-thesis/releases}{GitHub}.
 	Attended a broad selection of courses and seminars such as that of the~\httplink[BayesGroup]{bayesgroup.org}.
 }
-\tlcventry{2014}{2018}{BSc in Applied Mathematics~\faIcon{user-graduate}}{Vorone\'z State University}{Vorone\'z}{%
+\cventry{2014--2018}{BSc in Applied Mathematics~\faIcon{user-graduate}}{Vorone\'z State University}{Vorone\'z}{%
 }{
 	Bachelor's thesis based on peer-reviewed publications~\cite{someone-jpcs-2017,someone-volsu-2017,someone-vspu-2016}, supervised by
 	\href{www.mathnet.ru/eng/person8559}{Anatoly Grigorievi\'c Baskakov},
@@ -102,7 +99,7 @@ I've been walking on and off the academic track, in search of a venue where peop
 }
 
 \section{Speaking, writing, public presence}
-\tllabelcventry{2021}{0}{2021--2026 (DSc period)}{}{}{}{}{
+\cventry{2021--present}{(DSc period)}{}{}{}{
 	\httplink[NixCamp'24]{https://nix.camp/},
 	\httplink[Nix in Helsinki]{https://nix-fi.github.io},
 	\httplink[Full-Time Nix Podcast]{https://fulltimenix.com/episodes/someoneserge}~\citep{ftn24},
@@ -112,10 +109,10 @@ I've been walking on and off the academic track, in search of a venue where peop
 	NixCon'23~\faIcon[regular]{snowflake}~\cite{someone-nixcon23},
     \httplink[Geometry and Machine Learning]{gaml.mathi.uni-heidelberg.de} (remote).
 }
-\tllabelcventry{2018}{2020}{2018--2020 (MSc period)}{}{}{}{}{
+\cventry{2018--2020}{(MSc period)}{}{}{}{
 	Co-authored and presented~\cite{someone-hse-manopt} the \citet{geoopt}.
 }
-\tllabelcventry{2014}{2018}{2014--2018 (BSc period)}{}{}{}{}{
+\cventry{2014--2018}{(BSc period)}{}{}{}{
 	Published in peer-reviewed venues and presented~\citep{someone-jpcs-2017,someone-volsu-2017,someone-vspu-2016,someone-currentp-problems-2017}
 }
 
