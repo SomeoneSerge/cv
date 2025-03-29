@@ -9,10 +9,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     - name: Install Nix
-      uses: DeterminateSystems/nix-installer-action@v13
+      uses: cachix/install-nix-action@v31
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: DeterminateSystems/magic-nix-cache-action@v7
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
+        nix_path: nixpkgs=channel:nixos-24.11
     - run: nix-build -A cv -o cv.pdf
     - name: Release
       uses: softprops/action-gh-release@v2
